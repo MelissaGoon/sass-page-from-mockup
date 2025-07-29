@@ -23,5 +23,58 @@ body {
 /* Typography */
 /* Elements */
 /* Links */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 0;
+  align-items: initial;
+  margin-top: 79.2px;
+}
+.about a {
+  border-radius: 50px;
+  color: #090909;
+  padding: 79.2px 28px;
+  text-decoration: none;
+  margin: 0;
+  height: 625.73px;
+}
+.about .red-card {
+  font-family: "Montserrat", sans-serif;
+  background-color: #DA3E25;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  column-gap: 39.6px;
+}
+.about .red-card h2, .about .red-card span {
+  writing-mode: vertical-lr;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  text-align: right;
+}
+.about .red-card h2 {
+  transform: rotate(180deg);
+}
+.about .red-card span {
+  transform: rotate(0deg);
+}
+.about .red-card figure {
+  margin: 0;
+  max-width: 440px;
+}
+.about .yellow-card {
+  background-color: #FFC832;
+}
+.about .orange-card {
+  background-color: #FF5403;
+}
+.about .blue-card {
+  background-color: #C8E4FF;
+}
 
 /*# sourceMappingURL=styles.css.map */
