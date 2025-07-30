@@ -1,0 +1,44 @@
+@use "variables" as *;
+
+.product-gallery {
+    display: flex;
+    gap:2rem;
+    overflow: hidden;
+    margin: 1rem;
+    // TODO: change to standard
+
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    .product-card {
+        width: 19rem;
+        flex: 1 0 auto;
+        background-color: $brand-color-beige;
+        text-align: center;
+        img{
+            clip-path: url("#normal-path");
+        }
+
+        &:hover img{
+            clip-path: url("#hover-path");
+        }
+
+        h2 {
+            font-family: $heading-font;
+            font-weight: 900;
+        }
+
+        p{
+            font-family: $extra-font;
+            text-transform: uppercase;
+        }
+
+        button {
+            font-family: $body-font;
+             font-weight: 900;
+             padding: 0.5rem 1rem;
+             border: 2px solid $brand-color-black;
+             background-color: $brand-color-beige;
+             border-radius: 20px;
+        }
+    }
+}

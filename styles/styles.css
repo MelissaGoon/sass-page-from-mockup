@@ -55,5 +55,41 @@ body {
 /* Typography */
 /* Elements */
 /* Links */
+.product-gallery {
+  display: flex;
+  gap: 2rem;
+  overflow: hidden;
+  margin: 1rem;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.product-gallery .product-card {
+  width: 19rem;
+  flex: 1 0 auto;
+  background-color: #FDF7E7;
+  text-align: center;
+}
+.product-gallery .product-card img {
+  clip-path: url("#normal-path");
+}
+.product-gallery .product-card:hover img {
+  clip-path: url("#hover-path");
+}
+.product-gallery .product-card h2 {
+  font-family: "Big Shoulders", sans-serif;
+  font-weight: 900;
+}
+.product-gallery .product-card p {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+.product-gallery .product-card button {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 900;
+  padding: 0.5rem 1rem;
+  border: 2px solid #090909;
+  background-color: #FDF7E7;
+  border-radius: 20px;
+}
 
 /*# sourceMappingURL=styles.css.map */
