@@ -24,15 +24,18 @@ body {
 /* Elements */
 /* Links */
 .about {
+  background-color: #FDF7E7;
+}
+
+.about-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 0;
   align-items: initial;
   margin-top: 79.2px;
-  background-color: #FDF7E7;
 }
-.about a {
+.about-1 a {
   border-radius: 50px;
   color: #090909;
   padding: 79.2px 28px;
@@ -40,100 +43,18 @@ body {
   margin: 0;
   height: 625.73px;
 }
-.about .red-card {
-  font-family: "Montserrat", sans-serif;
-  background-color: #DA3E25;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  column-gap: 39.6px;
-}
-.about .red-card h2, .about .red-card span {
-  writing-mode: vertical-lr;
-  text-transform: uppercase;
-  margin: 0;
-  font-size: 18px;
-  letter-spacing: 1.2px;
-  font-weight: 700;
-  text-align: right;
-}
-.about .red-card h2 {
-  transform: rotate(180deg);
-}
-.about .red-card span {
-  transform: rotate(0deg);
-}
-.about .red-card figure {
-  margin: 0;
-  max-width: 440px;
-}
-.about .yellow-card, .about .orange-card {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  row-gap: 39.6px;
-  width: 100%;
-}
-.about .yellow-card h2, .about .orange-card h2 {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: "Big Shoulders", sans-serif;
-  font-size: 50px;
-  line-height: 45px;
-  font-weight: 800;
-  margin: 0;
-}
-.about .yellow-card p, .about .orange-card p {
-  font-family: "Bricolage Grotesque", sans-serif;
-  text-align: center;
-  width: 70%;
-  line-height: 22.4px;
-  margin: 8px 0;
-}
-.about .yellow-card div, .about .orange-card div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  column-gap: 39.6px;
-}
-.about .yellow-card div figure, .about .orange-card div figure {
-  margin: 0;
-  width: 81px;
-}
-.about .yellow-card div img, .about .orange-card div img {
-  height: 100%;
-  width: 100%;
-  vertical-align: middle;
-}
-.about .yellow-card div span, .about .orange-card div span {
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  font-size: 15px;
-}
-.about .yellow-card div .rotate, .about .orange-card div .rotate {
-  transform: rotate(180deg);
-}
-.about .orange-card {
-  background-color: #FF7520;
-}
-.about .yellow-card {
-  background-color: #FFC832;
-}
-.about .blue-card {
-  background-color: #C8E4FF;
+.about-1 .red-card,
+.about-1 .blue-card {
   font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
   column-gap: 39.6px;
 }
-.about .blue-card h2, .about .blue-card span {
+.about-1 .red-card h2,
+.about-1 .red-card span,
+.about-1 .blue-card h2,
+.about-1 .blue-card span {
   writing-mode: vertical-lr;
   text-transform: uppercase;
   margin: 0;
@@ -142,20 +63,137 @@ body {
   font-weight: 700;
   text-align: right;
 }
-.about .blue-card h2 {
+.about-1 .red-card h2,
+.about-1 .blue-card h2 {
   transform: rotate(180deg);
 }
-.about .blue-card span {
+.about-1 .red-card span,
+.about-1 .blue-card span {
   transform: rotate(0deg);
 }
-.about .blue-card figure {
-  margin: 0;
-  max-width: 360px;
-}
-.about .blue-card img {
+.about-1 .red-card img,
+.about-1 .blue-card img {
   height: 100%;
   width: 100%;
   vertical-align: middle;
+}
+.about-1 .yellow-card,
+.about-1 .orange-card {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 39.6px;
+  width: 100%;
+}
+.about-1 .yellow-card h2,
+.about-1 .orange-card h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 50px;
+  line-height: 45px;
+  font-weight: 800;
+  margin: 0;
+}
+.about-1 .yellow-card p,
+.about-1 .orange-card p {
+  font-family: "Bricolage Grotesque", sans-serif;
+  text-align: center;
+  width: 70%;
+  line-height: 22.4px;
+  margin: 8px 0;
+}
+.about-1 .yellow-card div,
+.about-1 .orange-card div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 39.6px;
+}
+.about-1 .yellow-card div figure,
+.about-1 .orange-card div figure {
+  margin: 0;
+  width: 81px;
+}
+.about-1 .yellow-card div img,
+.about-1 .orange-card div img {
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+}
+.about-1 .yellow-card div span,
+.about-1 .orange-card div span {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  font-size: 15px;
+}
+.about-1 .yellow-card div .rotate,
+.about-1 .orange-card div .rotate {
+  transform: rotate(180deg);
+}
+.about-1 .red-card {
+  justify-content: space-evenly;
+  background-color: #DA3E25;
+}
+.about-1 .red-card figure {
+  margin: 0;
+  max-width: 440px;
+}
+.about-1 .orange-card {
+  background-color: #FF7520;
+}
+.about-1 .yellow-card {
+  background-color: #FFC832;
+}
+.about-1 .blue-card {
+  background-color: #C8E4FF;
+  justify-content: space-around;
+}
+.about-1 .blue-card figure {
+  margin: 0;
+  max-width: 360px;
+}
+
+.about-2 {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+.about-2 .carousel {
+  display: flex;
+  position: relative;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.about-2 .carousel div {
+  padding: 40px 10px;
+}
+.about-2 figure {
+  width: 128px;
+}
+.about-2 a {
+  padding: 12px 19.8px 8px;
+  border: 2px solid #090909;
+  border-radius: 50px;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: #090909;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.about-2 .rot--15 {
+  transform: rotateZ(-15deg);
+}
+.about-2 .rot-15 {
+  transform: rotateZ(15deg);
 }
 
 /*# sourceMappingURL=styles.css.map */

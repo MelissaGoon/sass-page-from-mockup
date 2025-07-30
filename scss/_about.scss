@@ -1,160 +1,186 @@
 @use "variables" as *;
 
 .about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 0;
-    align-items: initial;
-    margin-top: 79.2px;
-    background-color: $brand-color-beige;
-    
-    a {
-        border-radius: 50px;
-        color: $brand-color-black;
-        padding: 79.2px 28px;
-        text-decoration: none;
+  background-color: $brand-color-beige;
+}
+
+.about-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 0;
+  align-items: initial;
+  margin-top: $space-2xl;
+
+  a {
+    border-radius: 50px;
+    color: $brand-color-black;
+    padding: $space-2xl $space-m;
+    text-decoration: none;
+    margin: 0;
+    height: 625.73px;
+  }
+
+  .red-card,
+  .blue-card {
+    font-family: $extra-font;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: $space-l;
+
+    h2,
+    span {
+      writing-mode: vertical-lr;
+      text-transform: uppercase;
+      margin: 0;
+      font-size: 17px;
+      letter-spacing: 1.2px;
+      font-weight: 700;
+      text-align: right;
+    }
+
+    h2 {
+      transform: rotate(180deg);
+    }
+
+    span {
+      transform: rotate(0deg);
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      vertical-align: middle;
+    }
+  }
+
+  .yellow-card,
+  .orange-card {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: $space-l;
+    width: 100%;
+
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      font-family: $heading-font;
+      font-size: 50px;
+      line-height: 45px;
+      font-weight: 800;
+      margin: 0;
+    }
+    p {
+      font-family: $body-font;
+      text-align: center;
+      width: 70%;
+      line-height: 22.4px;
+      margin: 8px 0;
+    }
+
+    div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      column-gap: $space-l;
+
+      figure {
         margin: 0;
-        height: 625.73px;
-    }
+        width: 81px;
+      }
 
-    .red-card {
-        font-family: $extra-font;
-        background-color: $extra-color-red;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        column-gap: 39.6px;
-
-        h2, span{
-            writing-mode: vertical-lr;
-            text-transform: uppercase;
-            margin: 0;
-            font-size: 18px;
-            letter-spacing: 1.2px;
-            font-weight: 700;
-            text-align: right;
-        }
-
-        h2 {
-            transform: rotate(180deg);
-        }
-
-        span {
-            transform: rotate(0deg);
-
-        }
-
-        figure {
-            margin: 0;
-            max-width: 440px;
-        }
-
-    }
-
-    .yellow-card, .orange-card {
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        row-gap: 39.6px;
+      img {
+        height: 100%;
         width: 100%;
+        vertical-align: middle;
+      }
 
-        h2 {
-            text-align: center;
-            text-transform: uppercase;
-            font-family: $heading-font;
-            font-size: 50px;
-            line-height: 45px;
-            font-weight: 800;
-            margin: 0;
-
-        }
-        p {
-            font-family: $body-font;
-            text-align: center;
-            width: 70%;
-            line-height: 22.4px;
-            margin: 8px 0;
-        }
-
-        div {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            column-gap: 39.6px;
-
-            figure {
-                margin: 0;
-                width: 81px;
-            }
-
-            img {
-                height: 100%;
-                width: 100%;
-                vertical-align: middle;
-            }
-
-            span {
-                font-family: $extra-font;
-                text-transform: uppercase;
-                font-weight: 700;
-                letter-spacing: 1.2px;
-                font-size: 15px;
-            }
-            .rotate {
-                transform: rotate(180deg);
-            }
-        }
-    }
-
-    .orange-card {
-        background-color: $extra-color-orange;
-    }
-    .yellow-card {
-        background-color: $extra-color-yellow;
-    }
-
-    .blue-card {
-        background-color: $extra-color-blue;
+      span {
         font-family: $extra-font;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        column-gap: 39.6px;
-
-        h2, span{
-            writing-mode: vertical-lr;
-            text-transform: uppercase;
-            margin: 0;
-            font-size: 17px;
-            letter-spacing: 1.2px;
-            font-weight: 700;
-            text-align: right;
-        }
-
-        h2 {
-            transform: rotate(180deg);
-        }
-
-        span {
-            transform: rotate(0deg);
-
-        }
-
-        figure {
-            margin: 0;
-            max-width: 360px;
-        }
-        img {
-                height: 100%;
-                width: 100%;
-                vertical-align: middle;
-            }
-
-
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        font-size: 15px;
+      }
+      .rotate {
+        transform: rotate(180deg);
+      }
     }
+  }
+
+  .red-card {
+    justify-content: space-evenly;
+    background-color: $extra-color-red;
+
+    figure {
+      margin: 0;
+      max-width: 440px;
+    }
+  }
+
+  .orange-card {
+    background-color: $extra-color-orange;
+  }
+
+  .yellow-card {
+    background-color: $extra-color-yellow;
+  }
+
+  .blue-card {
+    background-color: $extra-color-blue;
+    justify-content: space-around;
+
+    figure {
+      margin: 0;
+      max-width: 360px;
+    }
+  }
+}
+
+.about-2 {
+  padding-left: 0;
+  padding-right: 0;
+//   overflow: hidden;
+  width: 100%;
+
+  .carousel {
+    display: flex;
+    position: relative;
+    gap: 60px;
+    // gap: 40px;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+
+    div {
+      padding: 40px 10px;
+    }
+  }
+  figure {
+    width: 128px;
+  }
+
+  a {
+    padding: 12px $space-s 8px;
+    border: 2px solid $brand-color-black;
+    border-radius: 50px;
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    font-family: $extra-font;
+    text-decoration: none;
+    color: $brand-color-black;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .rot--15 {
+    transform: rotateZ(-15deg);
+  }
+  .rot-15 {
+    transform: rotateZ(15deg);
+  }
 }
