@@ -9,15 +9,12 @@
     scrollbar-width: none;
 
     .product-card {
-        $text-margin: 0.5rem;
-
         width: 95vw;
-        max-width: 450px;
         flex: 1 0 auto;
         background-color: $brand-color-beige;
         text-align: center;
         .img-container {
-            clip-path: inset(0 0 0 0 round 20px);
+            clip-path: inset(0 0 0 0 round clamp(20px, 10vw, 40px));
         }
 
         img {
@@ -29,32 +26,52 @@
             clip-path: polygon(100% 0, 85% 50%, 100% 100%, 0% 100%, 15% 50%, 0% 0%);
         }
 
-        h2 {
-            font-family: $heading-font;
-            font-weight: 900;
-            font-size: 1rem;
-            margin: $text-margin;
-        }
+        .card-text {
+            $text-margin: 0.5rem;
+            margin: $space-s;
+            h2 {
+                font-family: $heading-font;
+                font-weight: 900;
+                // TODO: clamp fonts
+                font-size: 1rem;
+                margin: $text-margin;
+            }
 
-        p {
-            font-family: $extra-font;
-            font-weight: 500;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            margin: $text-margin;
-        }
+            p {
+                font-family: $extra-font;
+                font-weight: 500;
+                font-size: 0.95rem;
+                text-transform: uppercase;
+                margin: $text-margin;
+            }
 
-        button {
-            @include wide-font;
-            font-family: $body-font;
-            font-weight: 700;
-            padding: 0.5rem 0.6rem;
-            border: 2px solid $brand-color-black;
-            background-color: $brand-color-beige;
-            border-radius: 20px;
+            button {
+                @include wide-font;
+                font-family: $body-font;
+                font-weight: 700;
+                padding: 0.5rem 0.7rem;
+                border: 2px solid $brand-color-black;
+                background-color: $brand-color-beige;
+                border-radius: 20px;
+            }
         }
     }
 
+    $large-gap: 2rem;
+
     @include mq($mobile-breakpoint) {
+        & {
+            gap: $large-gap;
+        }
+
+        .product-card {
+            width: calc((100vw - 8vw - #{$large-gap}) / 2);
+        }
+    }
+
+    @include mq($products-xl-breakpoint) {
+        .product-card {
+            width: calc((100vw - 6vw - (#{$large-gap} * 3)) / 4);
+        }
     }
 }

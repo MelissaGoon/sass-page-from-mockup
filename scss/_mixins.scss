@@ -13,3 +13,8 @@
     text-underline-offset: $offset;
     text-decoration: underline $width;
 }
+
+@mixin product-padding($percent: 3%) {
+    padding-left: $percent;
+    padding-right: $percent;
+}

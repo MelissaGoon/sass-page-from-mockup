@@ -64,13 +64,12 @@ body {
 }
 .product-gallery .product-card {
   width: 95vw;
-  max-width: 450px;
   flex: 1 0 auto;
   background-color: #fdf7e7;
   text-align: center;
 }
 .product-gallery .product-card .img-container {
-  clip-path: inset(0 0 0 0 round 20px);
+  clip-path: inset(0 0 0 0 round clamp(20px, 10vw, 40px));
 }
 .product-gallery .product-card img {
   clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 0% 50%, 0% 0%);
@@ -79,47 +78,94 @@ body {
 .product-gallery .product-card:hover img {
   clip-path: polygon(100% 0, 85% 50%, 100% 100%, 0% 100%, 15% 50%, 0% 0%);
 }
-.product-gallery .product-card h2 {
+.product-gallery .product-card .card-text {
+  margin: 19.8px;
+}
+.product-gallery .product-card .card-text h2 {
   font-family: "Big Shoulders", sans-serif;
   font-weight: 900;
   font-size: 1rem;
   margin: 0.5rem;
 }
-.product-gallery .product-card p {
+.product-gallery .product-card .card-text p {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 0.95rem;
   text-transform: uppercase;
   margin: 0.5rem;
 }
-.product-gallery .product-card button {
+.product-gallery .product-card .card-text button {
   letter-spacing: 1px;
   font-family: "Bricolage Grotesque", sans-serif;
   font-weight: 700;
-  padding: 0.5rem 0.6rem;
+  padding: 0.5rem 0.7rem;
   border: 2px solid #090909;
   background-color: #fdf7e7;
   border-radius: 20px;
 }
-.products {
-  background-color: #fdf7e7;
-  padding: 0.5rem;
+@media (min-width: 760px) {
+  .product-gallery {
+    gap: 2rem;
+  }
+  .product-gallery .product-card {
+    width: calc((92vw - 2rem) / 2);
+  }
 }
-.products .splash-text {
+@media (min-width: 1200px) {
+  .product-gallery .product-card {
+    width: calc((94vw - 2rem * 3) / 4);
+  }
+}
+
+.ingredients {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(1fr, 3);
+  flex-wrap: wrap;
+  font-family: "Montserrat", sans-serif;
+  gap: 1rem;
+  position: relative;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.ingredients figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: clamp(0.75rem, 4vw, 1rem);
+}
+.ingredients figure img {
+  height: clamp(3rem, 10vh, 5rem);
+  margin-bottom: 0.75rem;
+}
+.ingredients figure:last-child img {
+  margin: 0;
+  width: 100%;
+}
+.splash-text {
   margin: 19.8px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 3%;
+  padding-right: 3%;
 }
-.products .splash-text img {
+.splash-text img {
   width: 75%;
+  max-width: 300px;
 }
-.products .splash-text p {
+.splash-text p {
   font-family: "Bricolage Grotesque", sans-serif;
   text-align: center;
   font-size: clamp(1rem, 6vw, 2rem);
+  max-width: 65rem;
 }
-.products .splash-text a {
+.splash-text a {
   letter-spacing: 1px;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
@@ -128,13 +174,13 @@ body {
   font-size: clamp(0.9rem, 4vw, 1.3rem);
   text-transform: uppercase;
 }
-.products .splash-text a:hover,
-.products .splash-text a:focus,
-.products .splash-text a:active {
+.splash-text a:hover,
+.splash-text a:focus,
+.splash-text a:active {
   text-underline-offset: 0.25rem;
   text-decoration: underline 4px;
 }
-.products .splash-text a:after {
+.splash-text a:after {
   content: "";
   display: inline-block;
   background-image: url("../assets/right-arrow.svg");
@@ -144,12 +190,20 @@ body {
   width: clamp(0.9rem, 4vw, 1.3rem);
   height: clamp(0.9rem, 4vw, 1.3rem);
 }
+
+.products {
+  background-color: #fdf7e7;
+}
 .products .tab-names {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 28px 0;
-  margin-bottom: 19.8px;
+  margin: clamp(28px, 10vh, 39.6px) auto;
+  margin-bottom: clamp(19.8px, 10vh, 39.6px);
+  padding-left: 3%;
+  padding-right: 3%;
+  font-weight: 900;
+  max-width: 80rem;
 }
 .products .tab-names .tab {
   background: none;
@@ -159,32 +213,34 @@ body {
 }
 .products .tab-names .tab p {
   font-family: "Big Shoulders", sans-serif;
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 6vw, 4rem);
   margin: 0.5rem 0.2rem;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
 }
 .products .tab-names .tab .corner-num {
   font-family: "Bricolage Grotesque", sans-serif;
   margin: 0;
-  font-size: 1rem;
+  font-size: clamp(0.75rem, 2vw, 1rem);
   position: relative;
   top: 0;
   right: 0;
 }
 .products .tab-names .tab.current p {
-  text-underline-offset: 0.5rem;
-  text-decoration: underline 6px;
+  text-underline-offset: 0.4rem;
+  text-decoration: underline 5px;
 }
 .products .tab-names .tab:hover p, .products .tab-names .tab:active p, .products .tab-names .tab:focus p {
-  text-underline-offset: 0.5rem;
-  text-decoration: underline 6px;
+  text-underline-offset: 0.4rem;
+  text-decoration: underline 5px;
 }
 .products #product-gallery-container {
   position: relative;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 .products #product-gallery-container .arrow-btn {
   position: absolute;
-  top: 40%;
+  top: 37%;
   z-index: 999;
   background-color: #fdf7e7;
   border: none;
@@ -192,18 +248,39 @@ body {
   align-items: center;
   justify-content: center;
   aspect-ratio: 1;
-  padding: 0.5rem;
+  padding: 0.75rem;
   border-radius: 100%;
 }
 .products #product-gallery-container .arrow-btn svg {
-  height: 1rem;
+  height: 1.1rem;
   width: auto;
 }
 .products #product-gallery-container .arrow-btn#right-arrow-prod {
-  right: 0.5rem;
+  right: 5%;
 }
 .products #product-gallery-container .arrow-btn#left-arrow-prod {
-  left: 0.5rem;
+  left: 5%;
+}
+.products .page-divider {
+  margin: 19.8px 0;
+  background-image: url("../assets/seperator.svg");
+  background-repeat: repeat-x;
+  background-size: 1400px;
+  height: 35px;
+}
+@media (min-width: 760px) {
+  .products .tab-names {
+    justify-content: space-between;
+  }
+  .products #product-gallery-container .arrow-btn {
+    top: 40%;
+  }
+  .products #product-gallery-container .arrow-btn#right-arrow-prod {
+    right: 2%;
+  }
+  .products #product-gallery-container .arrow-btn#left-arrow-prod {
+    left: 2%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

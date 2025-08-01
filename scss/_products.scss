@@ -1,61 +1,22 @@
 @use "variables" as *;
 @use "mixins" as *;
 @use "product-gallery";
+@use "ingredients";
+@use "splash-text-prods";
 
 .products {
     background-color: $brand-color-beige;
-    padding: 0.5rem;
-
-    .splash-text {
-        $size-clamp: clamp(0.9rem, 4vw, 1.3rem);
-        margin: $space-s 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        img {
-            width: 75%;
-        }
-        p {
-            font-family: $body-font;
-            text-align: center;
-            font-size: clamp(1rem, 6vw, 2rem);
-        }
-
-        a {
-            @include wide-font;
-            font-family: $extra-font;
-            text-decoration: none;
-            color: $brand-color-black;
-            font-weight: 800;
-            font-size: $size-clamp;
-            text-transform: uppercase;
-        }
-
-        a:hover,
-        a:focus,
-        a:active {
-            @include underline;
-        }
-
-        a:after {
-            content: "";
-            display: inline-block;
-            background-image: url("../assets/right-arrow.svg");
-            background-repeat: no-repeat;
-            background-position: center;
-            margin-left: 0.5rem;
-            width: $size-clamp;
-            height: $size-clamp;
-        }
-    }
 
     .tab-names {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin: $space-m 0;
-        margin-bottom: $space-s;
+        margin: clamp($space-m, 10vh, $space-l) auto;
+        margin-bottom: clamp($space-s, 10vh, $space-l);
+        @include product-padding;
+
+        font-weight: 900;
+        max-width: 80rem;
 
         .tab {
             background: none;
@@ -65,38 +26,39 @@
 
             p {
                 font-family: $heading-font;
-                font-size: 2.5rem;
+                font-size: clamp(2rem, 6vw, 4rem);
                 margin: 0.5rem 0.2rem;
-                margin-top: 0.5rem;
+                margin-top: 0.25rem;
             }
 
             .corner-num {
                 font-family: $body-font;
                 margin: 0;
-                font-size: 1rem;
+                font-size: clamp(0.75rem, 2vw, 1rem);
                 position: relative;
                 top: 0;
                 right: 0;
             }
 
             &.current p {
-                @include underline(6px, 0.5rem);
+                @include underline(5px, 0.4rem);
             }
 
             &:hover p,
             &:active p,
             &:focus p {
-                @include underline(6px, 0.5rem);
+                @include underline(5px, 0.4rem);
             }
         }
     }
 
     #product-gallery-container {
         position: relative;
+        @include product-padding;
 
         .arrow-btn {
             position: absolute;
-            top: 40%;
+            top: 37%;
             z-index: 999;
             background-color: $brand-color-beige;
             border: none;
@@ -104,20 +66,48 @@
             align-items: center;
             justify-content: center;
             aspect-ratio: 1;
-            padding: 0.5rem;
+            padding: 0.75rem;
             border-radius: 100%;
 
             svg {
-                height: 1rem;
+                height: 1.1rem;
                 width: auto;
             }
 
             &#right-arrow-prod {
-                right: 0.5rem;
+                right: 5%;
             }
 
             &#left-arrow-prod {
-                left: 0.5rem;
+                left: 5%;
+            }
+        }
+    }
+
+    .page-divider {
+        // TODO: clamp margins
+        margin: $space-s 0;
+        background-image: url("../assets/seperator.svg");
+        background-repeat: repeat-x;
+        background-size: 1400px;
+        height: 35px;
+    }
+
+    @include mq($mobile-breakpoint) {
+        .tab-names {
+            justify-content: space-between;
+        }
+
+        #product-gallery-container {
+            .arrow-btn {
+                top: 40%;
+                &#right-arrow-prod {
+                    right: 2%;
+                }
+
+                &#left-arrow-prod {
+                    left: 2%;
+                }
             }
         }
     }

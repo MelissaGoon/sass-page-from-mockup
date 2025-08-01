@@ -1,0 +1,44 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.ingredients {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1fr, 3);
+    flex-wrap: wrap;
+    font-family: $extra-font;
+    gap: 1rem;
+    position: relative;
+    @include product-padding;
+
+    figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 1rem;
+
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: clamp(0.75rem, 4vw, 1rem);
+
+        img {
+            height: clamp(3rem, 10vh, 5rem);
+            margin-bottom: 0.75rem;
+        }
+    }
+    figure:last-child {
+        img {
+            margin: 0;
+            width: 100%;
+        }
+    }
+
+    // TODO: add breakpoints
+    @include mq($mobile-breakpoint) {
+    }
+
+    @include mq($products-xl-breakpoint) {
+    }
+}
