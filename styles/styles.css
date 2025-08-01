@@ -55,5 +55,106 @@ body {
 /* Typography */
 /* Elements */
 /* Links */
+.hero-header {
+  position: relative;
+  width: 100%;
+  background-color: #FDF7E7;
+  overflow: hidden;
+}
+.hero-header .hero-slide {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+  padding: 56px 28px;
+  background-color: #FFFFFE;
+}
+.hero-header .hero-slide.active {
+  display: flex;
+  opacity: 1;
+  position: relative;
+}
+.hero-header .hero-slide img {
+  width: 45%;
+  height: auto;
+  border-radius: 12px;
+}
+.hero-header .hero-slide .content {
+  width: 45%;
+  max-width: 600px;
+  text-align: left;
+}
+.hero-header .hero-slide .content h1 {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 3.13rem;
+  font-weight: 700;
+  color: #090909;
+  margin-bottom: 19.8px;
+}
+.hero-header .hero-slide .content p {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 15.599px;
+  line-height: 1.6;
+  color: #090909;
+  margin-bottom: 28px;
+}
+.hero-header .hero-slide .content p strong {
+  color: #FF7520;
+}
+.hero-header .hero-slide .content p i {
+  font-style: italic;
+}
+.hero-header .hero-slide .content a {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0.6em 1.2em;
+  background-color: #FF5403;
+  color: #FFFFFE;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+.hero-header .hero-slide .content a:hover {
+  background-color: #D96827;
+}
+.hero-header .hero-slide .content .slide-indicator {
+  display: block;
+  margin-top: 19.8px;
+  font-size: 0.875rem;
+  font-family: "Montserrat", sans-serif;
+  color: #5C3923;
+}
+.hero-header .hero-prev,
+.hero-header .hero-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #FF5403;
+  color: #FFFFFE;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+.hero-header .hero-prev:hover,
+.hero-header .hero-next:hover {
+  background-color: #D96827;
+}
+.hero-header .hero-prev {
+  left: 28px;
+}
+.hero-header .hero-next {
+  right: 28px;
+}
 
 /*# sourceMappingURL=styles.css.map */
