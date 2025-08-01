@@ -1,44 +1,60 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 .product-gallery {
     display: flex;
-    gap:2rem;
+    gap: 1rem;
     overflow: hidden;
-    margin: 1rem;
-    // TODO: change to standard
-
     scroll-behavior: smooth;
     scrollbar-width: none;
+
     .product-card {
-        width: 19rem;
+        $text-margin: 0.5rem;
+
+        width: 95vw;
+        max-width: 450px;
         flex: 1 0 auto;
         background-color: $brand-color-beige;
         text-align: center;
-        img{
-            clip-path: url("#normal-path");
+        .img-container {
+            clip-path: inset(0 0 0 0 round 20px);
         }
 
-        &:hover img{
-            clip-path: url("#hover-path");
+        img {
+            clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 0% 50%, 0% 0%);
+            transition: all 0.5s;
+        }
+
+        &:hover img {
+            clip-path: polygon(100% 0, 85% 50%, 100% 100%, 0% 100%, 15% 50%, 0% 0%);
         }
 
         h2 {
             font-family: $heading-font;
             font-weight: 900;
+            font-size: 1rem;
+            margin: $text-margin;
         }
 
-        p{
+        p {
             font-family: $extra-font;
+            font-weight: 500;
+            font-size: 0.95rem;
             text-transform: uppercase;
+            margin: $text-margin;
         }
 
         button {
+            @include wide-font;
             font-family: $body-font;
-             font-weight: 900;
-             padding: 0.5rem 1rem;
-             border: 2px solid $brand-color-black;
-             background-color: $brand-color-beige;
-             border-radius: 20px;
+            font-weight: 700;
+            padding: 0.5rem 0.6rem;
+            border: 2px solid $brand-color-black;
+            background-color: $brand-color-beige;
+            border-radius: 20px;
         }
+    }
+
+    @include mq($mobile-breakpoint) {
     }
 }

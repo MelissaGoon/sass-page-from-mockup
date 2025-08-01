@@ -1,6 +1,15 @@
 // Media Query Mixin
-@mixin mq($w){
-    @media (min-width: $w){
+@mixin mq($w) {
+    @media (min-width: $w) {
         @content;
     }
+}
+
+@mixin wide-font {
+    letter-spacing: 1px;
+}
+
+@mixin underline($width: 4px, $offset: 0.25rem) {
+    text-underline-offset: $offset;
+    text-decoration: underline $width;
 }
