@@ -7,7 +7,6 @@
     overflow: hidden;
     scroll-behavior: smooth;
     scrollbar-width: none;
-
     .product-card {
         width: 95vw;
         flex: 1 0 auto;
@@ -32,15 +31,14 @@
             h2 {
                 font-family: $heading-font;
                 font-weight: 900;
-                // TODO: clamp fonts
-                font-size: 1rem;
+                font-size: clamp(1rem, 6vw, 1.9rem);
                 margin: $text-margin;
             }
 
             p {
                 font-family: $extra-font;
                 font-weight: 500;
-                font-size: 0.95rem;
+                font-size: clamp(0.95rem, 5vw, 1.3rem);
                 text-transform: uppercase;
                 margin: $text-margin;
             }
@@ -49,10 +47,11 @@
                 @include wide-font;
                 font-family: $body-font;
                 font-weight: 700;
-                padding: 0.5rem 0.7rem;
+                font-size: clamp(1rem, 4vw, 1.3rem);
+                padding: clamp(0.5rem, 2vw, 0.7rem) clamp(0.7rem, 2vw, 1.5rem);
                 border: 2px solid $brand-color-black;
                 background-color: $brand-color-beige;
-                border-radius: 20px;
+                border-radius: clamp(20px, 10vw, 30px);
             }
         }
     }
@@ -70,8 +69,15 @@
     }
 
     @include mq($products-xl-breakpoint) {
+        & {
+            margin-bottom: $space-s;
+        }
         .product-card {
             width: calc((100vw - 6vw - (#{$large-gap} * 3)) / 4);
+
+            .card-text button {
+                border-width: 3px;
+            }
         }
     }
 }

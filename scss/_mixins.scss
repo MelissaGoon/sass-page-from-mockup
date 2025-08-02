@@ -1,3 +1,4 @@
+@use "variables" as *;
 // Media Query Mixin
 @mixin mq($w) {
     @media (min-width: $w) {
@@ -17,4 +18,8 @@
 @mixin product-padding($percent: 3%) {
     padding-left: $percent;
     padding-right: $percent;
+}
+
+@mixin vertical-margin-clamp {
+    margin: clamp($space-s, 20vh, $space-xl) 0;
 }

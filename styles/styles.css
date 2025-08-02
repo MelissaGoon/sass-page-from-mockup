@@ -84,13 +84,13 @@ body {
 .product-gallery .product-card .card-text h2 {
   font-family: "Big Shoulders", sans-serif;
   font-weight: 900;
-  font-size: 1rem;
+  font-size: clamp(1rem, 6vw, 1.9rem);
   margin: 0.5rem;
 }
 .product-gallery .product-card .card-text p {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: clamp(0.95rem, 5vw, 1.3rem);
   text-transform: uppercase;
   margin: 0.5rem;
 }
@@ -98,10 +98,11 @@ body {
   letter-spacing: 1px;
   font-family: "Bricolage Grotesque", sans-serif;
   font-weight: 700;
-  padding: 0.5rem 0.7rem;
+  font-size: clamp(1rem, 4vw, 1.3rem);
+  padding: clamp(0.5rem, 2vw, 0.7rem) clamp(0.7rem, 2vw, 1.5rem);
   border: 2px solid #090909;
   background-color: #fdf7e7;
-  border-radius: 20px;
+  border-radius: clamp(20px, 10vw, 30px);
 }
 @media (min-width: 760px) {
   .product-gallery {
@@ -112,19 +113,26 @@ body {
   }
 }
 @media (min-width: 1200px) {
+  .product-gallery {
+    margin-bottom: 19.8px;
+  }
   .product-gallery .product-card {
     width: calc((94vw - 2rem * 3) / 4);
+  }
+  .product-gallery .product-card .card-text button {
+    border-width: 3px;
   }
 }
 
 .ingredients {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(1fr, 3);
+  grid-template-rows: repeat(3, 1fr);
   flex-wrap: wrap;
   font-family: "Montserrat", sans-serif;
   gap: 1rem;
   position: relative;
+  margin: clamp(19.8px, 20vh, 56px) 0;
   padding-left: 3%;
   padding-right: 3%;
 }
@@ -147,6 +155,19 @@ body {
   margin: 0;
   width: 100%;
 }
+@media (min-width: 760px) {
+  .ingredients {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  .ingredients {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+
 .splash-text {
   margin: 19.8px 0;
   display: flex;
@@ -213,7 +234,7 @@ body {
 }
 .products .tab-names .tab p {
   font-family: "Big Shoulders", sans-serif;
-  font-size: clamp(2rem, 6vw, 4rem);
+  font-size: clamp(2rem, 6vw, 5rem);
   margin: 0.5rem 0.2rem;
   margin-top: 0.25rem;
 }
@@ -248,11 +269,11 @@ body {
   align-items: center;
   justify-content: center;
   aspect-ratio: 1;
-  padding: 0.75rem;
+  padding: clamp(0.75rem, 2vw, 0.9rem);
   border-radius: 100%;
 }
 .products #product-gallery-container .arrow-btn svg {
-  height: 1.1rem;
+  height: clamp(1.1rem, 2vw, 1.4rem);
   width: auto;
 }
 .products #product-gallery-container .arrow-btn#right-arrow-prod {
@@ -262,7 +283,7 @@ body {
   left: 5%;
 }
 .products .page-divider {
-  margin: 19.8px 0;
+  margin: clamp(19.8px, 20vh, 56px) 0;
   background-image: url("../assets/seperator.svg");
   background-repeat: repeat-x;
   background-size: 1400px;
@@ -276,10 +297,10 @@ body {
     top: 40%;
   }
   .products #product-gallery-container .arrow-btn#right-arrow-prod {
-    right: 2%;
+    right: 1.5%;
   }
   .products #product-gallery-container .arrow-btn#left-arrow-prod {
-    left: 2%;
+    left: 1.5%;
   }
 }
 

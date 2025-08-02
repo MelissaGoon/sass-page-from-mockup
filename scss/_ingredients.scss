@@ -4,11 +4,12 @@
 .ingredients {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(1fr, 3);
+    grid-template-rows: repeat(3, 1fr);
     flex-wrap: wrap;
     font-family: $extra-font;
     gap: 1rem;
     position: relative;
+    @include vertical-margin-clamp;
     @include product-padding;
 
     figure {
@@ -35,10 +36,15 @@
         }
     }
 
-    // TODO: add breakpoints
     @include mq($mobile-breakpoint) {
+        & {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 1fr;
+        }
     }
 
     @include mq($products-xl-breakpoint) {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
     }
 }
