@@ -52,6 +52,43 @@
                 border: 2px solid $brand-color-black;
                 background-color: $brand-color-beige;
                 border-radius: clamp(20px, 10vw, 30px);
+                transform: translateY(0px);
+                transition: transform 0.5s;
+
+                .hover-text {
+                    display: none;
+                }
+            }
+
+            button:hover,
+            button:focus,
+            button:active {
+                transform: translateY(-0.5rem);
+                background-color: $brand-color-orange;
+                border-radius: 0;
+                color: $brand-color-beige;
+                border: none;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    background-image: url(../assets/btn-corner-prods.svg);
+                    position: absolute;
+                    background-size: cover;
+                    top: 0;
+                    right: 0;
+                    height: 19px;
+                    width: 16px;
+                    z-index: 1;
+                    background-repeat: no-repeat;
+                }
+
+                .hover-text {
+                    display: block;
+                }
+                .price {
+                    display: none;
+                }
             }
         }
     }

@@ -103,6 +103,45 @@ body {
   border: 2px solid #090909;
   background-color: #fdf7e7;
   border-radius: clamp(20px, 10vw, 30px);
+  transform: translateY(0px);
+  transition: transform 0.5s;
+}
+.product-gallery .product-card .card-text button .hover-text {
+  display: none;
+}
+.product-gallery .product-card .card-text button:hover,
+.product-gallery .product-card .card-text button:focus,
+.product-gallery .product-card .card-text button:active {
+  transform: translateY(-0.5rem);
+  background-color: #ff5403;
+  border-radius: 0;
+  color: #fdf7e7;
+  border: none;
+  position: relative;
+}
+.product-gallery .product-card .card-text button:hover::after,
+.product-gallery .product-card .card-text button:focus::after,
+.product-gallery .product-card .card-text button:active::after {
+  content: "";
+  background-image: url(../assets/btn-corner-prods.svg);
+  position: absolute;
+  background-size: cover;
+  top: 0;
+  right: 0;
+  height: 19px;
+  width: 16px;
+  z-index: 1;
+  background-repeat: no-repeat;
+}
+.product-gallery .product-card .card-text button:hover .hover-text,
+.product-gallery .product-card .card-text button:focus .hover-text,
+.product-gallery .product-card .card-text button:active .hover-text {
+  display: block;
+}
+.product-gallery .product-card .card-text button:hover .price,
+.product-gallery .product-card .card-text button:focus .price,
+.product-gallery .product-card .card-text button:active .price {
+  display: none;
 }
 @media (min-width: 760px) {
   .product-gallery {
