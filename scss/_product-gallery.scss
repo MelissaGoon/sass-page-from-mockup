@@ -7,6 +7,10 @@
     overflow: hidden;
     scroll-behavior: smooth;
     scrollbar-width: none;
+
+    &.hidden {
+        display: none;
+    }
     .product-card {
         width: 95vw;
         flex: 1 0 auto;

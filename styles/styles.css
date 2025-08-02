@@ -62,6 +62,9 @@ body {
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
+.product-gallery.hidden {
+  display: none;
+}
 .product-gallery .product-card {
   width: 95vw;
   flex: 1 0 auto;
