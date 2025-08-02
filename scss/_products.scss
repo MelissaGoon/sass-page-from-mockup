@@ -11,8 +11,8 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin: clamp($space-m, 10vh, $space-l) auto;
-        margin-bottom: clamp($space-s, 10vh, $space-l);
+        margin: clamp($space-s, 10vh, $space-l) auto;
+        margin-bottom: clamp(0.3rem, 2vh, $space-m);
         @include product-padding;
 
         font-weight: 900;

@@ -261,8 +261,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: clamp(28px, 10vh, 39.6px) auto;
-  margin-bottom: clamp(19.8px, 10vh, 39.6px);
+  margin: clamp(19.8px, 10vh, 39.6px) auto;
+  margin-bottom: clamp(0.3rem, 2vh, 28px);
   padding-left: 3%;
   padding-right: 3%;
   font-weight: 900;
