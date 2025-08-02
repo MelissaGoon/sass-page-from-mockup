@@ -39,10 +39,8 @@ let width = curr_product_gallery.offsetWidth;
 window.addEventListener("resize", () => {
     width = curr_product_gallery.offsetWidth
     gap = Number(getComputedStyle(curr_product_gallery).gap.slice(0, -2));
-    console.log(gap)
 });
 
-console.log(curr_product_gallery.offsetWidth);
 next.addEventListener("click", () => {
     curr_product_gallery.scrollBy(width + gap, 0);
 });
@@ -52,9 +50,6 @@ prev.addEventListener("click", () => {
 });
 
 function switchTabs(tab) {
-    // console.log(curr_product_gallery.id);
-    // console.log(tab);
-    // console.log(tab_gallery_pairs[tab.id].id);
     if (curr_product_gallery.id != tab_gallery_pairs[tab.id].id) {
         curr_product_gallery.classList.toggle("hidden");
         curr_product_gallery = tab_gallery_pairs[tab.id];
