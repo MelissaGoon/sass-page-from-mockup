@@ -1,0 +1,114 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.site-header {
+    background-color: #FDF7E7;
+    padding: $space-m 0;
+    border-bottom: 1px solid $extra-color-salmon;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: $space-m;
+    }
+
+    .logo img {
+        height: 48px;
+        width: auto;
+    }
+
+    .main-nav {
+        flex-grow: 1;
+
+        .nav-list {
+            display: flex;
+            align-items: center;
+            gap: $space-l;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                position: relative;
+
+                a,
+                span {
+                    font-family: $extra-font;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    color: $brand-color-black;
+                    text-decoration: none;
+                    padding: 0.5em 0.75em;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4em;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: $extra-color-dark-orange;
+                    }
+
+                    &::after {
+                        content: '';
+                        display: inline-block;
+                        width: 12px;
+                        height: 12px;
+                        background-image: url('../assets/arrow.svg');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        transition: transform 0.3s ease;
+                    }
+                }
+
+                &:hover span::after {
+                    transform: rotate(90deg);
+                }
+
+                .submenu {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    background-color: #FDF7E7;
+                    border: 1px solid $extra-color-salmon;
+                    padding: $space-s;
+                    display: none;
+                    flex-direction: column;
+                    gap: $space-s;
+                    z-index: 100;
+
+                    li a {
+                        font-size: 0.95rem;
+                        color: $brand-color-black;
+
+                        &:hover {
+                            color: $extra-color-dark-orange;
+                        }
+                    }
+                }
+
+                &:hover .submenu {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    .header-icons {
+        display: flex;
+        gap: $space-s;
+
+        .icon-link img {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.2s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

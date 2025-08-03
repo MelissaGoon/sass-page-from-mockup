@@ -7,6 +7,7 @@
   background-color: $brand-color-beige;
   overflow: hidden;
 
+
   .hero-slide {
     display: none;
     opacity: 0;
@@ -15,6 +16,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    background-color: #FED5C5;
 
     &.active {
       display: flex;
@@ -27,7 +29,7 @@
     justify-content: center;
     gap: $space-xl;
     padding: $space-xl $space-m;
-    background-color: $brand-color-white;
+    // background-color: $brand-color-white;
 
     img {
       width: 45%;
@@ -73,12 +75,28 @@
         background-color: $brand-color-orange;
         color: $brand-color-white;
         text-decoration: none;
-        border-radius: 6px;
-        transition: background-color 0.3s ease;
+        transition: transform 0.2s ease, background-color 0.3s ease;
+        position: relative;
 
-        &:hover {
+        &:hover,
+        &:focus {
+          transform: translateY(-0.3rem);
           background-color: $extra-color-dark-orange;
         }
+
+        &::after {
+          content: "";
+          background-image: url(../assets/bouton-croque-1.svg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 19px;
+          width: 16px;
+          pointer-events: none;
+        }
+
       }
 
       .slide-indicator {
