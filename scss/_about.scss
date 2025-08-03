@@ -56,7 +56,7 @@
     }
 
     img:hover {
-       transform: scale(1.03);
+      transform: scale(1.03);
     }
   }
 
@@ -100,8 +100,8 @@
       }
 
       figure:hover {
-          transform: rotate(360deg);
-        }
+        transform: rotate(360deg);
+      }
 
       img {
         height: 100%;
@@ -154,7 +154,7 @@
 .about-2 {
   padding-left: 0;
   padding-right: 0;
-//   overflow: hidden;
+  overflow: hidden;
   width: 100%;
 
   .carousel {
@@ -165,10 +165,14 @@
     align-items: center;
     justify-content: center;
     white-space: nowrap;
+    overflow: hidden;
 
     div {
       padding: 40px 10px;
     }
+  }
+  .carousel > div {
+    flex-shrink: 0;
   }
   figure {
     width: 128px;

@@ -171,6 +171,7 @@ body {
 .about-2 {
   padding-left: 0;
   padding-right: 0;
+  overflow: hidden;
   width: 100%;
 }
 .about-2 .carousel {
@@ -180,9 +181,13 @@ body {
   align-items: center;
   justify-content: center;
   white-space: nowrap;
+  overflow: hidden;
 }
 .about-2 .carousel div {
   padding: 40px 10px;
+}
+.about-2 .carousel > div {
+  flex-shrink: 0;
 }
 .about-2 figure {
   width: 128px;
