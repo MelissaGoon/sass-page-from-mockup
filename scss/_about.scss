@@ -52,6 +52,11 @@
       height: 100%;
       width: 100%;
       vertical-align: middle;
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+       transform: scale(1.03);
     }
   }
 
@@ -91,7 +96,12 @@
       figure {
         margin: 0;
         width: 81px;
+        transition: all 1.5s ease;
       }
+
+      figure:hover {
+          transform: rotate(360deg);
+        }
 
       img {
         height: 100%;

@@ -76,6 +76,11 @@ body {
   height: 100%;
   width: 100%;
   vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+.about-1 .red-card img:hover,
+.about-1 .blue-card img:hover {
+  transform: scale(1.03);
 }
 .about-1 .yellow-card,
 .about-1 .orange-card {
@@ -116,6 +121,11 @@ body {
 .about-1 .orange-card div figure {
   margin: 0;
   width: 81px;
+  transition: all 1.5s ease;
+}
+.about-1 .yellow-card div figure:hover,
+.about-1 .orange-card div figure:hover {
+  transform: rotate(360deg);
 }
 .about-1 .yellow-card div img,
 .about-1 .orange-card div img {
@@ -194,6 +204,243 @@ body {
 }
 .about-2 .rot-15 {
   transform: rotateZ(15deg);
+}
+
+footer {
+  background-color: #FDF7E7;
+}
+
+.forms {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.forms .newsletter {
+  background-color: #EE83A4;
+  padding: 79.2px 56px;
+}
+.forms .newsletter span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.forms .newsletter .news-text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  justify-content: space-between;
+}
+.forms .newsletter .news-text h2 {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 56px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+.forms .newsletter .news-text p {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  width: 50%;
+  line-height: 1.4;
+}
+.forms .newsletter .news-button {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  gap: 10px;
+}
+.forms .newsletter .news-button p {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  text-align: left;
+  border-bottom: 1px solid #090909;
+  padding-right: 12rem;
+  padding-bottom: 0;
+  margin: 0;
+  align-content: space-around;
+}
+.forms .newsletter .news-button a {
+  text-decoration: none;
+  color: #EE83A4;
+  background-color: #090909;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 12px 20px;
+}
+.forms .carte {
+  background-color: #FF5400;
+  padding: 79.2px 56px;
+}
+.forms .carte span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.forms .carte h2 {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 56px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 28px;
+  margin-bottom: 0px;
+}
+.forms .carte .carte-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  margin-top: 10px;
+}
+.forms .carte .carte-text p {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  width: 60%;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+.forms .carte .carte-text a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FF7520;
+  background-color: #090909;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  margin-left: 10px;
+  padding: 12px 20px;
+  transition: transform 0.3s ease;
+}
+.forms .carte .carte-text a:hover {
+  transform: translateX(-10px);
+}
+
+.infos {
+  display: flex;
+  flex-direction: row;
+  margin-top: 79.2px;
+  align-items: flex-start;
+  padding: 0 56px;
+}
+.infos .infos-1 {
+  width: 33%;
+  row-gap: 39.6px;
+}
+.infos .infos-1 p {
+  font-family: "Bricolage Grotesque", sans-serif;
+  line-height: 1.4rem;
+}
+.infos .infos-1 div {
+  display: flex;
+  flex-direction: row;
+  column-gap: 19.8px;
+  align-items: center;
+}
+.infos .infos-1 div h2 {
+  font-family: "Big Shoulders", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 34px;
+}
+.infos .infos-1 div a {
+  width: 30px;
+}
+.infos .infos-2 {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  row-gap: 28px;
+  align-items: center;
+}
+.infos .infos-2 .logo-footer {
+  width: 235px;
+}
+.infos .infos-2 .signature-footer {
+  width: 196px;
+}
+.infos .infos-3 {
+  width: 17%;
+}
+.infos .infos-3 li {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 14px;
+}
+.infos .infos-3 li a {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #090909;
+}
+.infos .infos-3 li:hover {
+  text-decoration: underline;
+}
+.infos .infos-4 {
+  width: 17%;
+}
+.infos .infos-4 li {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 14px;
+}
+.infos .infos-4 li a {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #090909;
+}
+.infos .infos-4 li:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-top: 56px;
+  display: flex;
+  flex-direction: row;
+  padding: 0 56px;
+  align-items: center;
+  column-gap: 28px;
+  font-weight: 100;
+  font-size: 14px;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+.copyright a {
+  text-decoration: none;
+  color: #090909;
+}
+.copyright a:hover {
+  text-decoration: underline;
+}
+.copyright .besoin {
+  width: 144px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding: 0;
+}
+.copyright .whatsapp {
+  width: 50px;
+  margin: 0;
+}
+
+.footer-bar {
+  margin-top: 28px;
+  background-position: top center;
+  background-image: url(https://atelierdegeraldine.fr/wp-content/uploads/footer-fin-2.svg);
+  background-size: 200px;
+  height: 32px;
 }
 
 /*# sourceMappingURL=styles.css.map */
