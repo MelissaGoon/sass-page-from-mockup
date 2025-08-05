@@ -1,12 +1,19 @@
 @use "variables" as *;
+@use "mixins" as *;
+
 
 .about {
   background-color: $brand-color-beige;
 }
 
 .about-1 {
+  @include mq(47.5em) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  // grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 0;
   align-items: initial;

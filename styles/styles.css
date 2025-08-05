@@ -61,11 +61,16 @@ body {
 
 .about-1 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 0;
   align-items: initial;
   margin-top: 79.2px;
+}
+@media (min-width: 47.5em) {
+  .about-1 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
 .about-1 a {
   border-radius: 50px;
@@ -249,7 +254,13 @@ footer {
 
 .forms {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+@media (min-width: 47.5em) {
+  .forms {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 }
 .forms .newsletter {
   background-color: #EE83A4;
@@ -361,14 +372,27 @@ footer {
 
 .infos {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 79.2px;
-  align-items: flex-start;
-  padding: 0 56px;
+  align-items: center;
+  padding: 0 1rem;
+}
+@media (min-width: 47.5em) {
+  .infos {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 56px;
+  }
 }
 .infos .infos-1 {
-  width: 33%;
-  row-gap: 39.6px;
+  width: 90%;
+  row-gap: 19.8px;
+}
+@media (min-width: 47.5em) {
+  .infos .infos-1 {
+    width: 33%;
+    row-gap: 39.6px;
+  }
 }
 .infos .infos-1 p {
   font-family: "Bricolage Grotesque", sans-serif;
@@ -392,9 +416,15 @@ footer {
 .infos .infos-2 {
   display: flex;
   flex-direction: column;
-  width: 33%;
-  row-gap: 28px;
+  width: 90%;
+  row-gap: 19.8px;
   align-items: center;
+}
+@media (min-width: 47.5em) {
+  .infos .infos-2 {
+    width: 33%;
+    row-gap: 28px;
+  }
 }
 .infos .infos-2 .logo-footer {
   width: 235px;
@@ -403,7 +433,12 @@ footer {
   width: 196px;
 }
 .infos .infos-3 {
-  width: 17%;
+  width: 90%;
+}
+@media (min-width: 47.5em) {
+  .infos .infos-3 {
+    width: 17%;
+  }
 }
 .infos .infos-3 li {
   list-style: none;
@@ -422,7 +457,12 @@ footer {
   text-decoration: underline;
 }
 .infos .infos-4 {
-  width: 17%;
+  width: 90%;
+}
+@media (min-width: 47.5em) {
+  .infos .infos-4 {
+    width: 17%;
+  }
 }
 .infos .infos-4 li {
   list-style: none;
@@ -445,8 +485,10 @@ footer {
   margin-top: 56px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   padding: 0 56px;
   align-items: center;
+  justify-content: center;
   column-gap: 28px;
   font-weight: 100;
   font-size: 14px;
@@ -460,12 +502,18 @@ footer {
   text-decoration: underline;
 }
 .copyright .besoin {
+  width: 90%;
   width: 144px;
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
-  margin-left: auto;
+  margin-left: 0;
   padding: 0;
+}
+@media (min-width: 47.5em) {
+  .copyright .besoin {
+    margin-left: auto;
+  }
 }
 .copyright .whatsapp {
   width: 50px;
