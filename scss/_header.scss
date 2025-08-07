@@ -2,7 +2,7 @@
 @use 'mixins' as *;
 
 .site-header {
-    background-color: #FDF7E7;
+    background-color: $brand-color-beige;
     padding: $space-m 0;
     border-bottom: 1px solid $extra-color-salmon;
 
@@ -15,7 +15,7 @@
     }
 
     .logo img {
-        height: 48px;
+        height: 8rem; // Increased from 6rem
         width: auto;
     }
 
@@ -33,6 +33,22 @@
             li {
                 position: relative;
 
+                &.has-submenu>span::after {
+                    content: '';
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    background-image: url('../assets/arrow.svg');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    transition: transform 0.3s ease;
+                }
+
+                &.has-submenu:hover>span::after {
+                    transform: rotate(90deg);
+                }
+
                 a,
                 span {
                     font-family: $extra-font;
@@ -46,33 +62,18 @@
                     align-items: center;
                     gap: 0.4em;
                     transition: color 0.3s ease;
+                    text-transform: uppercase;
 
                     &:hover {
                         color: $extra-color-dark-orange;
                     }
-
-                    &::after {
-                        content: '';
-                        display: inline-block;
-                        width: 12px;
-                        height: 12px;
-                        background-image: url('../assets/arrow.svg');
-                        background-size: contain;
-                        background-repeat: no-repeat;
-                        background-position: center;
-                        transition: transform 0.3s ease;
-                    }
-                }
-
-                &:hover span::after {
-                    transform: rotate(90deg);
                 }
 
                 .submenu {
                     position: absolute;
                     top: 100%;
                     left: 0;
-                    background-color: #FDF7E7;
+                    background-color: $brand-color-beige;
                     border: 1px solid $extra-color-salmon;
                     padding: $space-s;
                     display: none;
@@ -80,12 +81,18 @@
                     gap: $space-s;
                     z-index: 100;
 
-                    li a {
-                        font-size: 0.95rem;
-                        color: $brand-color-black;
+                    li {
+                        list-style: none; // ✅ remove bullet
+                        margin: 0;
+                        padding: 0;
 
-                        &:hover {
-                            color: $extra-color-dark-orange;
+                        a {
+                            font-size: 0.95rem;
+                            color: $brand-color-black;
+
+                            &:hover {
+                                color: $extra-color-dark-orange;
+                            }
                         }
                     }
                 }
@@ -102,8 +109,8 @@
         gap: $space-s;
 
         .icon-link img {
-            width: 24px;
-            height: 24px;
+            width: 32px; // bigger SVG icons
+            height: 32px;
             transition: transform 0.2s ease;
 
             &:hover {
