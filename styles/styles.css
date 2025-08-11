@@ -360,7 +360,6 @@ body {
 }
 .hero-header .hero-slide .content a:hover, .hero-header .hero-slide .content a:focus {
   transform: translateY(-0.3rem);
-  background-color: #D96827;
 }
 .hero-header .hero-slide .content a::after {
   content: "";
