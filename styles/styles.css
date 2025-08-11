@@ -311,7 +311,17 @@ body {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  order: 1;
+  order: 0;
+  object-position: center top;
+  display: block;
+}
+.hero-header .hero-slide .slide-right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px;
+  box-sizing: border-box;
 }
 .hero-header .hero-slide .content {
   width: 100%;
