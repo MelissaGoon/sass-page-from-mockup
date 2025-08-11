@@ -54,9 +54,10 @@ body {
   z-index: 100000;
 }
 
-/* Typography */
-/* Elements */
-/* Links */
+body {
+  background-color: #fdf7e7;
+}
+
 .product-gallery {
   display: flex;
   gap: 1rem;

@@ -2,12 +2,12 @@ function Marquee(selector, speed) {
   const parent = document.querySelector(selector);
   const content = parent.innerHTML;
 
-  parent.insertAdjacentHTML("beforeend", content); // 2x duplicação
+  parent.insertAdjacentHTML("beforeend", content); 
   parent.insertAdjacentHTML("beforeend", content);
 
   let i = 0;
   let isPaused = false;
-  const resetPoint = parent.scrollWidth / 3; // porque o conteúdo foi triplicado
+  const resetPoint = parent.scrollWidth / 3; 
 
   parent.addEventListener("mouseenter", () => {
     isPaused = true;
@@ -21,7 +21,6 @@ function Marquee(selector, speed) {
     if (!isPaused) {
       i -= speed;
 
-      // Quando o conteúdo andar até 1 bloco completo, reseta
       if (Math.abs(i) >= resetPoint) {
         i = 0;
       }
