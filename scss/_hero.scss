@@ -1,5 +1,5 @@
-@use 'variables' as *;
-@use 'mixins' as *;
+@use "variables" as *;
+@use "mixins" as *;
 
 .hero-header {
   position: relative;
@@ -76,7 +76,9 @@
         background-color: $brand-color-orange;
         color: $brand-color-white;
         text-decoration: none;
-        transition: transform 0.2s ease, background-color 0.3s ease;
+        transition:
+          transform 0.2s ease,
+          background-color 0.3s ease;
         position: relative;
 
         &:hover,
@@ -97,7 +99,6 @@
           pointer-events: none;
         }
       }
-
     }
 
     .slide-indicator {
@@ -118,10 +119,9 @@
   .hero-next {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     width: 48px;
     height: 48px;
-    background-color: $brand-color-white;
+    background-color: $brand-color-beige;
     color: $brand-color-black;
     border: none;
     border-radius: 50%;
@@ -133,9 +133,16 @@
     align-items: center;
     justify-content: center;
 
+    svg {
+      height: clamp(1.1rem, 2vw, 1.4rem);
+      width: auto;
+    }
+
     &:hover {
-      background-color: $extra-color-dark-orange;
-      color: $brand-color-white;
+      background-color: $brand-color-orange;
+      svg {
+        fill: $brand-color-beige;
+      }
     }
   }
 
@@ -188,7 +195,7 @@
       position: relative;
       flex-direction: row;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       gap: $space-xl;
       // padding: $space-xl $space-m;
       // background-color: $brand-color-pink;
@@ -200,8 +207,14 @@
         order: 0;
       }
 
-      .content {
+      .slide-right {
         width: 50%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .content {
+        width: 100%;
         max-width: 600px;
         height: 100%;
         padding: 0 5px 0 0;
@@ -235,7 +248,6 @@
         position: absolute;
         bottom: -100px;
         left: 50%;
-        // transform: translateX(-50%);
         text-align: center;
         font-size: var(--text-m);
       }

@@ -389,10 +389,9 @@ body {
 .hero-header .hero-next {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   width: 48px;
   height: 48px;
-  background-color: #fffffe;
+  background-color: #fdf7e7;
   color: #090909;
   border: none;
   border-radius: 50%;
@@ -403,10 +402,18 @@ body {
   align-items: center;
   justify-content: center;
 }
+.hero-header .hero-prev svg,
+.hero-header .hero-next svg {
+  height: clamp(1.1rem, 2vw, 1.4rem);
+  width: auto;
+}
 .hero-header .hero-prev:hover,
 .hero-header .hero-next:hover {
-  background-color: #D96827;
-  color: #fffffe;
+  background-color: #ff5400;
+}
+.hero-header .hero-prev:hover svg,
+.hero-header .hero-next:hover svg {
+  fill: #fdf7e7;
 }
 .hero-header .hero-prev {
   left: 28px;
@@ -447,7 +454,7 @@ body {
     position: relative;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 56px;
   }
   .hero-header .hero-slide img {
@@ -456,8 +463,13 @@ body {
     object-fit: cover;
     order: 0;
   }
-  .hero-header .hero-slide .content {
+  .hero-header .hero-slide .slide-right {
     width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-header .hero-slide .content {
+    width: 100%;
     max-width: 600px;
     height: 100%;
     padding: 0 5px 0 0;
@@ -777,6 +789,7 @@ body {
   border: none;
   display: flex;
   align-items: center;
+  cursor: pointer;
   justify-content: center;
   aspect-ratio: 1;
   padding: clamp(0.75rem, 2vw, 0.9rem);

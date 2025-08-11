@@ -1,6 +1,6 @@
 const slides = document.querySelectorAll('.hero-slide');
-const prevBtn = document.querySelector('.hero-prev');
-const nextBtn = document.querySelector('.hero-next');
+const prevBtn = document.getElementById('hero-prev');
+const nextBtn = document.getElementById('hero-next');
 let currentSlide = 0;
 
 function showSlide(index) {
