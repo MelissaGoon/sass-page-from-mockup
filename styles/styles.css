@@ -57,7 +57,7 @@ body {
 /* Links */
 .site-header {
   background-color: #FDF7E7;
-  padding: 28px 0;
+  padding: 19.8px 28px;
   border-bottom: 1px solid #F8D1BE;
 }
 .site-header .container {
@@ -176,6 +176,9 @@ body {
   display: none;
 }
 @media (min-width: 760px) {
+  .site-header {
+    padding: 19.8px 39.6px;
+  }
   .site-header .container {
     display: flex;
     align-items: center;
@@ -271,8 +274,8 @@ body {
     gap: 19.8px;
   }
   .site-header .header-icons .icon-link img {
-    width: clamp(32px, 4vw, 48px);
-    height: clamp(32px, 4vw, 48px);
+    width: clamp(40px, 4.5vw, 56px);
+    height: clamp(40px, 4.5vw, 56px);
     transition: transform 0.2s ease;
   }
   .site-header .header-icons .icon-link img:hover {
@@ -368,17 +371,17 @@ body {
   width: 16px;
   pointer-events: none;
 }
-.hero-header .hero-slide .content .slide-indicator {
+.hero-header .hero-slide .slide-indicator {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
   text-align: center;
-  margin-bottom: 28px;
   font-size: 1rem;
   font-family: "Montserrat", sans-serif;
   color: #FF7520;
   font-weight: 700;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 .hero-header .hero-prev,
 .hero-header .hero-next {
@@ -439,7 +442,7 @@ body {
 
 @media (min-width: 760px) {
   .hero-header .hero-slide {
-    position: absolute;
+    position: relative;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -454,9 +457,12 @@ body {
   .hero-header .hero-slide .content {
     width: 50%;
     max-width: 600px;
-    padding: 0;
+    height: 100%;
+    padding: 0 5px 0 0;
     order: 0;
-    text-align: left;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
   .hero-header .hero-slide .content h1 {
     font-size: 80px;
@@ -465,20 +471,21 @@ body {
   .hero-header .hero-slide .content p {
     font-size: 15.6px;
     max-width: 480px;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 28px;
+    text-align: center;
   }
   .hero-header .hero-slide .content a {
     font-size: 14px;
     padding: 0.6em 1.2em;
+    margin-bottom: 19.8px;
   }
-  .hero-header .hero-slide .content .slide-indicator {
-    bottom: 40px;
-    left: auto;
-    right: 28px;
+  .hero-header .hero-slide .slide-indicator {
     position: absolute;
-    text-align: right;
+    bottom: -100px;
+    left: 50%;
+    text-align: center;
     font-size: var(--text-m);
   }
   .site-header {

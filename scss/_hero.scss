@@ -99,18 +99,19 @@
         }
       }
 
-      .slide-indicator {
-        text-align: center;
-        margin-bottom: $space-m;
-        font-size: 1rem;
-        font-family: $extra-font;
-        color: $extra-color-orange;
-        font-weight: 700;
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-      }
+    }
+
+    .slide-indicator {
+      position: absolute;
+      bottom: 10px; // adjust spacing from bottom
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0; // remove top/bottom margins from mobile flow
+      text-align: center;
+      font-size: 1rem;
+      font-family: $extra-font;
+      color: $extra-color-orange;
+      font-weight: 700;
     }
   }
 
@@ -185,7 +186,7 @@
 @media (min-width: 760px) {
   .hero-header {
     .hero-slide {
-      position: absolute;
+      position: relative;
       flex-direction: row;
       align-items: center;
       justify-content: center;
@@ -203,9 +204,12 @@
       .content {
         width: 50%;
         max-width: 600px;
-        padding: 0;
+        height: 100%;
+        padding: 0 5px 0 0;
         order: 0;
-        text-align: left;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
 
         h1 {
           font-size: 80px;
@@ -215,24 +219,26 @@
         p {
           font-size: 15.6px;
           max-width: 480px;
-          margin-left: 0;
-          margin-right: 0;
+          margin-left: auto;
+          margin-right: auto;
           margin-bottom: $space-m;
+          text-align: center;
         }
 
         a {
           font-size: 14px;
           padding: 0.6em 1.2em;
+          margin-bottom: $space-s;
         }
+      }
 
-        .slide-indicator {
-          bottom: 40px;
-          left: auto;
-          right: $space-m;
-          position: absolute;
-          text-align: right;
-          font-size: var(--text-m);
-        }
+      .slide-indicator {
+        position: absolute;
+        bottom: -100px;
+        left: 50%;
+        // transform: translateX(-50%);
+        text-align: center;
+        font-size: var(--text-m);
       }
     }
   }

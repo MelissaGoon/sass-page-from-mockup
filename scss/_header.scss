@@ -3,7 +3,7 @@
 
 .site-header {
     background-color: $brand-color-beige;
-    padding: $space-m 0;
+    padding: $space-s $space-m;
     border-bottom: 1px solid $extra-color-salmon;
 
     .container {
@@ -159,12 +159,14 @@
             display: none;
         }
 
+        padding: $space-s $space-l;
+
         .logo img {
-            height: 8rem; // bigger on desktop
+            height: 8rem
         }
 
         .main-nav {
-            display: flex !important; // force desktop menu visible
+            display: flex !important;
             flex-grow: 1;
             background: none;
             border: none;
@@ -262,8 +264,8 @@
             gap: $space-s;
 
             .icon-link img {
-                width: clamp(32px, 4vw, 48px);
-                height: clamp(32px, 4vw, 48px);
+                width: clamp(40px, 4.5vw, 56px);
+                height: clamp(40px, 4.5vw, 56px);
                 transition: transform 0.2s ease;
 
                 &:hover {
