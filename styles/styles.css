@@ -116,7 +116,7 @@ body {
 .product-gallery .product-card .card-text button:focus,
 .product-gallery .product-card .card-text button:active {
   transform: translateY(-0.5rem);
-  background-color: #ff5403;
+  background-color: #ff5400;
   border-radius: 0;
   color: #fdf7e7;
   border: none;
@@ -344,6 +344,479 @@ body {
   .products #product-gallery-container .arrow-btn#left-arrow-prod {
     left: 1.5%;
   }
+}
+
+.about {
+  background-color: #fdf7e7;
+}
+
+.about-1 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 0;
+  align-items: initial;
+  margin-top: 79.2px;
+}
+@media (min-width: 47.5em) {
+  .about-1 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+.about-1 a {
+  border-radius: 50px;
+  color: #090909;
+  padding: 79.2px 28px;
+  text-decoration: none;
+  margin: 0;
+  height: 625.73px;
+}
+.about-1 .red-card,
+.about-1 .blue-card {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 39.6px;
+}
+.about-1 .red-card h2,
+.about-1 .red-card span,
+.about-1 .blue-card h2,
+.about-1 .blue-card span {
+  writing-mode: vertical-lr;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 17px;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  text-align: right;
+}
+.about-1 .red-card h2,
+.about-1 .blue-card h2 {
+  transform: rotate(180deg);
+}
+.about-1 .red-card span,
+.about-1 .blue-card span {
+  transform: rotate(0deg);
+}
+.about-1 .red-card img,
+.about-1 .blue-card img {
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+.about-1 .red-card img:hover,
+.about-1 .blue-card img:hover {
+  transform: scale(1.03);
+}
+.about-1 .yellow-card,
+.about-1 .orange-card {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 39.6px;
+  width: 100%;
+}
+.about-1 .yellow-card h2,
+.about-1 .orange-card h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 50px;
+  line-height: 45px;
+  font-weight: 800;
+  margin: 0;
+}
+.about-1 .yellow-card p,
+.about-1 .orange-card p {
+  font-family: "Bricolage Grotesque", sans-serif;
+  text-align: center;
+  width: 70%;
+  line-height: 22.4px;
+  margin: 8px 0;
+}
+.about-1 .yellow-card div,
+.about-1 .orange-card div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 39.6px;
+}
+.about-1 .yellow-card div figure,
+.about-1 .orange-card div figure {
+  margin: 0;
+  width: 81px;
+  transition: all 1.5s ease;
+}
+.about-1 .yellow-card div figure:hover,
+.about-1 .orange-card div figure:hover {
+  transform: rotate(360deg);
+}
+.about-1 .yellow-card div img,
+.about-1 .orange-card div img {
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+}
+.about-1 .yellow-card div span,
+.about-1 .orange-card div span {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  font-size: 15px;
+}
+.about-1 .yellow-card div .rotate,
+.about-1 .orange-card div .rotate {
+  transform: rotate(180deg);
+}
+.about-1 .red-card {
+  justify-content: space-evenly;
+  background-color: #da3e25;
+}
+.about-1 .red-card figure {
+  margin: 0;
+  max-width: 440px;
+}
+.about-1 .orange-card {
+  background-color: #ff7520;
+}
+.about-1 .yellow-card {
+  background-color: #ffc832;
+}
+.about-1 .blue-card {
+  background-color: #c8e4ff;
+  justify-content: space-around;
+}
+.about-1 .blue-card figure {
+  margin: 0;
+  max-width: 360px;
+}
+
+.about-2 {
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+  width: 100%;
+}
+.about-2 .carousel {
+  display: flex;
+  position: relative;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.about-2 .carousel div {
+  padding: 40px 10px;
+}
+.about-2 .carousel > div {
+  flex-shrink: 0;
+}
+.about-2 figure {
+  width: 128px;
+}
+.about-2 a {
+  padding: 12px 19.8px 8px;
+  border: 2px solid #090909;
+  border-radius: 50px;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: #090909;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.about-2 .rot--15 {
+  transform: rotateZ(-15deg);
+}
+.about-2 .rot-15 {
+  transform: rotateZ(15deg);
+}
+
+footer {
+  background-color: #fdf7e7;
+}
+
+.forms {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+@media (min-width: 47.5em) {
+  .forms {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+.forms .newsletter {
+  background-color: #ee83a4;
+  padding: 79.2px 56px;
+}
+.forms .newsletter span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.forms .newsletter .news-text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  justify-content: space-between;
+}
+.forms .newsletter .news-text h2 {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 56px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+.forms .newsletter .news-text p {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  width: 50%;
+  line-height: 1.4;
+}
+.forms .newsletter .news-button {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  gap: 10px;
+}
+.forms .newsletter .news-button p {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  text-align: left;
+  border-bottom: 1px solid #090909;
+  padding-right: 12rem;
+  padding-bottom: 0;
+  margin: 0;
+  align-content: space-around;
+}
+.forms .newsletter .news-button a {
+  text-decoration: none;
+  color: #ee83a4;
+  background-color: #090909;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 12px 20px;
+}
+.forms .carte {
+  background-color: #ff5400;
+  padding: 79.2px 56px;
+}
+.forms .carte span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.forms .carte h2 {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 56px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 28px;
+  margin-bottom: 0px;
+}
+.forms .carte .carte-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  margin-top: 10px;
+}
+.forms .carte .carte-text p {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  width: 60%;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+.forms .carte .carte-text a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ff7520;
+  background-color: #090909;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  margin-left: 10px;
+  padding: 12px 20px;
+  transition: transform 0.3s ease;
+}
+.forms .carte .carte-text a:hover {
+  transform: translateX(-10px);
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  margin-top: 79.2px;
+  align-items: center;
+  padding: 0 1rem;
+}
+@media (min-width: 47.5em) {
+  .infos {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 56px;
+  }
+}
+.infos .infos-1 {
+  width: 90%;
+  row-gap: 19.8px;
+}
+@media (min-width: 47.5em) {
+  .infos .infos-1 {
+    width: 33%;
+    row-gap: 39.6px;
+  }
+}
+.infos .infos-1 p {
+  font-family: "Bricolage Grotesque", sans-serif;
+  line-height: 1.4rem;
+}
+.infos .infos-1 div {
+  display: flex;
+  flex-direction: row;
+  column-gap: 19.8px;
+  align-items: center;
+}
+.infos .infos-1 div h2 {
+  font-family: "Big Shoulders", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 34px;
+}
+.infos .infos-1 div a {
+  width: 30px;
+}
+.infos .infos-2 {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  row-gap: 19.8px;
+  align-items: center;
+}
+@media (min-width: 47.5em) {
+  .infos .infos-2 {
+    width: 33%;
+    row-gap: 28px;
+  }
+}
+.infos .infos-2 .logo-footer {
+  width: 235px;
+}
+.infos .infos-2 .signature-footer {
+  width: 196px;
+}
+.infos .infos-3 {
+  width: 90%;
+}
+@media (min-width: 47.5em) {
+  .infos .infos-3 {
+    width: 17%;
+  }
+}
+.infos .infos-3 li {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 14px;
+}
+.infos .infos-3 li a {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #090909;
+}
+.infos .infos-3 li:hover {
+  text-decoration: underline;
+}
+.infos .infos-4 {
+  width: 90%;
+}
+@media (min-width: 47.5em) {
+  .infos .infos-4 {
+    width: 17%;
+  }
+}
+.infos .infos-4 li {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 14px;
+}
+.infos .infos-4 li a {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #090909;
+}
+.infos .infos-4 li:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-top: 56px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 56px;
+  align-items: center;
+  justify-content: center;
+  column-gap: 28px;
+  font-weight: 100;
+  font-size: 14px;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+.copyright a {
+  text-decoration: none;
+  color: #090909;
+}
+.copyright a:hover {
+  text-decoration: underline;
+}
+.copyright .besoin {
+  width: 90%;
+  width: 144px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding: 0;
+}
+@media (min-width: 47.5em) {
+  .copyright .besoin {
+    margin-left: auto;
+  }
+}
+.copyright .whatsapp {
+  width: 50px;
+  margin: 0;
+}
+
+.footer-bar {
+  margin-top: 28px;
+  background-position: top center;
+  background-image: url(https://atelierdegeraldine.fr/wp-content/uploads/footer-fin-2.svg);
+  background-size: 200px;
+  height: 32px;
 }
 
 /*# sourceMappingURL=styles.css.map */
