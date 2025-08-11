@@ -5,7 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SASS Page From Mockup - L'Atelier de Géraldine</title>
-    <meta name="description" content="A website dedicated to Penang, Malaysia, exploring its food and heritage." />
+    <meta name="description" content="A website dedicated to Penang, Malaysia, exploring its food and heritage.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>SASS Page From Mockup - L'Atelier de Géraldine</title>
+    <meta name="description" content="A website dedicated to Penang, Malaysia, exploring its food and heritage.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,9 +26,169 @@
 
 <body>
     <a class="screen-reader-text" href="#site-main">Skip to content</a>
-    <header></header>
+
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="assets/logo-arrondi-bloc.svg" alt="Atelier de Géraldine Logo" />
+            </a>
+            <!-- Hamburger Menu (Mobile) -->
+            <button class="hamburger" aria-label="Ouvrir le menu">
+                <span></span><span></span><span></span>
+            </button>
+
+
+
+            <!-- Desktop -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="has-submenu">
+                        <span>Bricelets</span>
+                        <ul class="submenu">
+                            <li><a>Sucrés</a></li>
+                            <li><a>Salés</a></li>
+                            <li><a>Personnalisation</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu">
+                        <span>Épicerie</span>
+                        <ul class="submenu">
+                            <li><a>Tablettes de chocolat</a></li>
+                            <li><a>Vinaigres</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu">
+                        <span>Biscuiterie</span>
+                        <ul class="submenu">
+                            <li><a>Notre histoire</a></li>
+                            <li><a>Le bricelet</a></li>
+                            <li><a>Palette de saveurs</a></li>
+                            <li><a>Contact &amp; Nous visiter</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item"><a>Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <!-- Search Icon -->
+                <a href="assets/search.svg" class="icon-link" aria-label="Rechercher">
+                    <img src="assets/search.svg" alt="Recherche" />
+                </a>
+
+                <!-- Profile Icon -->
+                <a href="assets/profile.svg" class="icon-link" aria-label="Profil">
+                    <img src="assets/profile.svg" alt="Profil utilisateur" />
+                </a>
+
+                <!-- Cart Icon -->
+                <a href="assets/cart.svg" class="icon-link" aria-label="Panier">
+                    <img src="assets/cart.svg" alt="Panier" />
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Géraldine Hero Slides -->
     <main id="site-main">
-        <article class="hero"></article>
+        <article class="hero-header">
+            <!-- Slide 1 -->
+            <section class="hero-slide" id="slide-1">
+                <img src="assets/header-tablette.png" alt="Chocolat + Bricelet" />
+                <div class="content">
+                    <h1>Chocolat + Bricelet</h1>
+                    <p>C’est l’histoire <i>hot</i> en saveur 🔥 entre une
+                        biscuitière spécialiste du bricelet 🧇 et un artisan chocolatier passionné,
+                        travaillant de la fève à la tablette 🍫. Un jour, ils font <strong>crack-crack</strong>
+                        ensemble… 😏 Et <i>paf</i>, ça a fait du <strong>chocolat aux éclats de
+                            bricelet</strong> ! 💥</p>
+                    <a href="https://atelierdegeraldine.fr/produits/tablettes-de-chocolat/">Tablettes chocolat +
+                        bricelets</a>
+                    <span class="slide-indicator">1 / 7</span>
+                </div>
+            </section>
+
+            <section class="hero-slide" id="slide-2">
+                <img src="assets/1-1.png" alt="Pimpez vos salades" />
+                <div class="content">
+                    <h1>Pimpez vos salades</h1>
+                    <p>Pimpez vos salades avec une touche de soleil et de bonne humeur ! Nos vinaigres
+                        de cidre se marient au miel de fleurs et aux fruits de saison, mais aussi à des
+                        saveurs uniques du Jura comme l'ail des ours. Un vrai shot de "happy" dans votre
+                        assiette !</p>
+                    <a href="https://atelierdegeraldine.fr/produits/vinaigres">Vinaigres de cidre</a>
+                    <span class="slide-indicator">2 / 7</span>
+                </div>
+            </section>
+
+            <section class="hero-slide" id="slide-3">
+                <img src="assets/slide-1.jpg" alt="Le renouveau de l’apéro" />
+                <div class="content">
+                    <h1>Le renouveau de l’apéro</h1>
+                    <p>Pour faire crack-crack avec les copains… ou en solo, nous avons imaginé une gamme
+                        de bricelets salés aux saveurs plus originales et gourmandes les unes que les
+                        autres. Une fois la main dans le paquet, impossible de s’arrêter !</p>
+                    <a href="https://atelierdegeraldine.fr/produits/bricelets-sales/">Nos bricelets salés</a>
+                    <span class="slide-indicator">3 / 7</span>
+                </div>
+            </section>
+
+            <section class="hero-slide" id="slide-4">
+                <img src="assets/slide-2-1.jpg" alt="Douceurs à croquer" />
+                <div class="content">
+                    <h1>Douceurs à croquer</h1>
+                    <p>Des saveurs les plus classiques aux plus
+                        créatives, nos bricelets sucrés enchanteront petits et grands gourmands à
+                        l’heure du goûter, de la pause café ou de n’importe quel petit creux de la
+                        journée. Le plus difficile sera de savoir par quel parfum commencer !</p>
+                    <a href="https://atelierdegeraldine.fr/produits/bricelets-sucres/">Nos bricelets sucrés</a>
+                    <span class="slide-indicator">4 / 7</span>
+                </div>
+            </section>
+
+            <section class="hero-slide" id="slide-5">
+                <img src="assets/slide-4.jpg" alt="Un savoir-fer authentique" />
+                <div class="content">
+                    <h1>Un « savoir-fer » authentique</h1>
+                    <p>Nos bricelets sont confectionnés dans notre petit
+                        atelier de Saint-Amour de manière 100% artisanale et fidèle à la recette qui
+                        nous a été transmise.</p>
+                    <a href="https://atelierdegeraldine.fr/biscuiterie/bricelet/">Nos secrets de fabrication</a>
+                    <span class="slide-indicator">5 / 7</span>
+                </div>
+            </section>
+
+            <section class="hero-slide" id="slide-6">
+                <img src="assets/slide-3.jpg" alt="Amour & Gourmandise" />
+                <div class="content">
+                    <h1>Amour & Gourmandise</h1>
+                    <p>Il était une fois <em>Géraldine Rude</em>, son
+                        savoir-faire pâtissier, sa créativité débordante, son (Saint) Amour infini
+                        pour sa région et ses traditions, sans oublier son goût de la transmission.
+                        Bref, tous les ingrédients de la meilleure et de la plus authentique recette
+                        de biscuiterie artisanale jurassienne…</p>
+                    <a href="https://atelierdegeraldine.fr/biscuiterie/notre-histoire/">Notre histoire ❤</a>
+                    <span class="slide-indicator">6 / 7</span>
+                </div>
+            </section>
+
+            <section class="hero-slide" id="slide-7">
+                <img src="assets/slide-5.jpg" alt="Ça sort du four !" />
+                <div class="content">
+                    <h1>Ça sort du four !</h1>
+                    <p>Nouveautés, évènements et rendez-vous gourmands,
+                        vie de l’atelier, portraits de producteurs,… nous partageons sur notre blog
+                        toutes nos dernières actualités les plus croustillantes :) </p>
+                    <a href="https://atelierdegeraldine.fr/blog/">Notre blog</a>
+                    <span class="slide-indicator">7 / 7</span>
+                </div>
+            </section>
+            <button class="hero-prev" aria-label="Slide précédente">←</button>
+            <button class="hero-next" aria-label="Slide suivante">→</button>
+        </article>
+
         <article class="products">
             <article class="splash-text">
                 <img src="assets/Geralidnes_yeux-1.svg"
@@ -617,6 +785,7 @@
             </div>
         </article>
     </main>
+
     <footer>
         <section class="forms">
             <div class="newsletter">
@@ -708,6 +877,8 @@
     <script src="/scripts/script.js"></script>
 
     <script src="scripts/products-section.js"></script>
+    <script src="scripts/hero-slider.js"></script>
+    <script src="scripts/menu.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,277 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.site-header {
+    background-color: $brand-color-beige;
+    padding: $space-s $space-m;
+    border-bottom: 1px solid $extra-color-salmon;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: $space-m;
+    }
+
+    .logo img {
+        height: 6rem; // smaller on mobile
+        width: auto;
+    }
+
+    // --- MOBILE styles ---
+    // Hamburger menu visible
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 24px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+
+        span {
+            width: 100%;
+            height: 3px;
+            background-color: $brand-color-black;
+            border-radius: 2px;
+            transition: all 0.3s linear;
+            transform-origin: 1px;
+        }
+
+        &.open span:nth-child(1) {
+            transform: rotate(45deg);
+        }
+
+        &.open span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+
+        &.open span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+    }
+
+    // Mobile menu hidden by default
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: $brand-color-beige;
+        border-top: 1px solid $extra-color-salmon;
+        padding: $space-m 0;
+
+
+        &.open {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav-list {
+            flex-direction: row;
+            gap: $space-m;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                position: relative;
+
+                &.has-submenu>a::after,
+                &.has-submenu>span::after {
+                    content: '';
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    background-image: url('../assets/arrow.svg');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    margin-left: 0.5em;
+                    transition: transform 0.3s ease;
+                }
+
+                a,
+                span {
+                    font-family: $extra-font;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    color: $brand-color-black;
+                    text-decoration: none;
+                    padding: 0.5em 1rem;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4em;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                .submenu {
+                    display: none;
+                    flex-direction: column;
+                    padding-left: 1.5rem;
+                    margin-top: 0.5rem;
+
+                    li {
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+
+                        a {
+                            font-size: 0.95rem;
+                            color: $brand-color-black;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                    &.open {
+                        display: flex; // Show submenu when .open is toggled
+                    }
+                }
+
+                // Optionally add styles here if you want to toggle submenu on mobile
+            }
+        }
+    }
+
+    .header-icons {
+        display: none; // hide on mobile
+    }
+
+    // --- DESKTOP styles ---
+    @media (min-width: 760px) {
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        padding: $space-s $space-l;
+
+        .logo img {
+            height: 8rem
+        }
+
+        .main-nav {
+            display: flex !important;
+            flex-grow: 1;
+            background: none;
+            border: none;
+            padding: 0;
+
+            .nav-list {
+                display: flex;
+                align-items: center;
+                gap: $space-l;
+                justify-content: center; // add this line
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    position: relative;
+
+                    &.has-submenu>span::after {
+                        content: '';
+                        display: inline-block;
+                        width: 12px;
+                        height: 12px;
+                        background-image: url('../assets/arrow.svg');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        transition: transform 0.3s ease;
+                        margin-left: 0.3em;
+                    }
+
+                    &.has-submenu:hover>span::after {
+                        transform: rotate(90deg);
+                    }
+
+                    a,
+                    span {
+                        font-family: $extra-font;
+                        font-weight: 600;
+                        font-size: 1rem;
+                        color: $brand-color-black;
+                        text-decoration: none;
+                        padding: 0.5em 0.75em;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        gap: 0.4em;
+                        transition: color 0.3s ease;
+                        text-transform: uppercase;
+                    }
+
+                    // Add underline on hover
+                    &.has-submenu:hover>span {
+                        text-decoration: underline;
+                    }
+
+                    .submenu {
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        background-color: $brand-color-beige;
+                        border: 1px solid $extra-color-salmon;
+                        padding: $space-s;
+                        display: none;
+                        flex-direction: column;
+                        gap: $space-s;
+                        z-index: 100;
+
+                        li {
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+
+                            a {
+                                font-size: 0.95rem;
+                                color: $brand-color-black;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover .submenu {
+                        display: flex;
+                    }
+                }
+
+
+            }
+        }
+
+        .header-icons {
+            display: flex;
+            gap: $space-s;
+
+            .icon-link img {
+                width: clamp(40px, 4.5vw, 56px);
+                height: clamp(40px, 4.5vw, 56px);
+                transition: transform 0.2s ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

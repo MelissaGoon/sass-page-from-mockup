@@ -1,1 +1,285 @@
-@use "variables" as *;
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.hero-header {
+  position: relative;
+  width: 100%;
+  background-color: $brand-color-pink;
+  overflow: hidden;
+
+  .hero-slide {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: relative; // relative for stacking content naturally on mobile
+    flex-direction: column; // stack vertically
+    align-items: center;
+    justify-content: center;
+    gap: $space-m;
+
+    &.active {
+      display: flex;
+      opacity: 1;
+      position: relative;
+    }
+
+    img {
+      width: 100%;
+      height: 250px; // fixed height with cropping
+      object-fit: cover;
+      order: 1; // image below content on mobile
+    }
+
+    .content {
+      width: 100%;
+      max-width: none;
+      padding: $space-m;
+      position: relative;
+      z-index: 2;
+      order: 1; // content above image
+
+      h1 {
+        font-family: $heading-font;
+        font-size: 2rem; // smaller font on mobile
+        font-weight: 700;
+        color: $brand-color-orange;
+        margin-bottom: $space-s;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      p {
+        font-family: $body-font;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: $brand-color-orange;
+        margin-bottom: $space-m;
+        max-width: 100%;
+        text-align: center;
+
+        strong {
+          color: $extra-color-orange;
+          font-weight: bolder;
+        }
+
+        i {
+          font-style: italic;
+        }
+      }
+
+      a {
+        display: inline-block;
+        font-family: $extra-font;
+        font-weight: 600;
+        font-size: 0.9rem;
+        padding: 0.5em 1em;
+        background-color: $brand-color-orange;
+        color: $brand-color-white;
+        text-decoration: none;
+        transition: transform 0.2s ease, background-color 0.3s ease;
+        position: relative;
+
+        &:hover,
+        &:focus {
+          transform: translateY(-0.3rem);
+          background-color: $extra-color-dark-orange;
+        }
+
+        &::after {
+          content: "";
+          background-image: url(../assets/bouton-croque-1.svg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 19px;
+          width: 16px;
+          pointer-events: none;
+        }
+      }
+
+    }
+
+    .slide-indicator {
+      position: absolute;
+      bottom: 10px; // adjust spacing from bottom
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0; // remove top/bottom margins from mobile flow
+      text-align: center;
+      font-size: 1rem;
+      font-family: $extra-font;
+      color: $extra-color-orange;
+      font-weight: 700;
+    }
+  }
+
+  .hero-prev,
+  .hero-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background-color: $brand-color-white;
+    color: $brand-color-black;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: $extra-color-dark-orange;
+      color: $brand-color-white;
+    }
+  }
+
+  .hero-prev {
+    left: $space-m;
+  }
+
+  .hero-next {
+    right: $space-m;
+  }
+}
+
+// HEADER - mobile first, overlay on hero image
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background: $brand-color-beige; // transparent so image shows behind
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $space-s $space-m;
+  }
+
+  .logo img {
+    height: 4rem; // smaller logo on mobile
+  }
+
+  .hamburger {
+    z-index: 21;
+  }
+
+  .main-nav {
+    display: none; // hidden on mobile
+  }
+
+  .header-icons {
+    display: none; // hidden on mobile
+  }
+}
+
+// DESKTOP and up - revert to side by side hero and normal header
+@media (min-width: 760px) {
+  .hero-header {
+    .hero-slide {
+      position: relative;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: $space-xl;
+      // padding: $space-xl $space-m;
+      // background-color: $brand-color-pink;
+
+      img {
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+        order: 0;
+      }
+
+      .content {
+        width: 50%;
+        max-width: 600px;
+        height: 100%;
+        padding: 0 5px 0 0;
+        order: 0;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+          font-size: 80px;
+          margin-bottom: $space-s;
+        }
+
+        p {
+          font-size: 15.6px;
+          max-width: 480px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: $space-m;
+          text-align: center;
+        }
+
+        a {
+          font-size: 14px;
+          padding: 0.6em 1.2em;
+          margin-bottom: $space-s;
+        }
+      }
+
+      .slide-indicator {
+        position: absolute;
+        bottom: -100px;
+        left: 50%;
+        // transform: translateX(-50%);
+        text-align: center;
+        font-size: var(--text-m);
+      }
+    }
+  }
+
+  .site-header {
+    position: static;
+    background: $brand-color-beige;
+
+    .container {
+      padding: 0;
+    }
+
+    .logo img {
+      height: 8rem;
+    }
+
+    .hamburger {
+      display: none;
+    }
+
+    .main-nav {
+      display: flex !important;
+      flex-grow: 1;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: $space-s;
+
+      .icon-link img {
+        width: 32px;
+        height: 32px;
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
