@@ -150,8 +150,10 @@ body {
   gap: 0.4em;
   text-transform: uppercase;
 }
-.site-header .main-nav .nav-list li a:hover,
-.site-header .main-nav .nav-list li span:hover {
+.site-header .main-nav .nav-list li a:hover, .site-header .main-nav .nav-list li a:active, .site-header .main-nav .nav-list li a:focus,
+.site-header .main-nav .nav-list li span:hover,
+.site-header .main-nav .nav-list li span:active,
+.site-header .main-nav .nav-list li span:focus {
   text-decoration: underline;
 }
 .site-header .main-nav .nav-list li .submenu {
@@ -269,7 +271,7 @@ body {
   .site-header .main-nav .nav-list li .submenu li a:hover {
     text-decoration: underline;
   }
-  .site-header .main-nav .nav-list li:hover .submenu {
+  .site-header .main-nav .nav-list li:hover .submenu, .site-header .main-nav .nav-list li:active .submenu, .site-header .main-nav .nav-list li:focus .submenu {
     display: flex;
   }
   .site-header .header-icons {
@@ -361,7 +363,7 @@ body {
   transition: transform 0.2s ease, background-color 0.3s ease;
   position: relative;
 }
-.hero-header .hero-slide .content a:hover, .hero-header .hero-slide .content a:focus {
+.hero-header .hero-slide .content a:hover, .hero-header .hero-slide .content a:active, .hero-header .hero-slide .content a:focus {
   transform: translateY(-0.3rem);
 }
 .hero-header .hero-slide .content a::after {
@@ -395,8 +397,7 @@ body {
   width: 48px;
   height: 48px;
   background-color: #fdf7e7;
-  color: #090909;
-  border: none;
+  border: 2px solid #fdf7e7;
   border-radius: 50%;
   font-size: 1.5rem;
   cursor: pointer;
@@ -414,10 +415,16 @@ body {
 .hero-header .hero-prev:hover,
 .hero-header .hero-next:hover {
   background-color: #ff5400;
+  border-color: #ff5400;
 }
 .hero-header .hero-prev:hover svg,
 .hero-header .hero-next:hover svg {
   fill: #fdf7e7;
+}
+.hero-header .hero-prev:active, .hero-header .hero-prev:focus,
+.hero-header .hero-next:active,
+.hero-header .hero-next:focus {
+  border: #ff5400 2px solid;
 }
 .hero-header .hero-prev {
   left: 5px;
@@ -790,7 +797,7 @@ body {
   top: 37%;
   z-index: 999;
   background-color: #fdf7e7;
-  border: none;
+  border: 2px #fdf7e7 solid;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -808,6 +815,16 @@ body {
 }
 .products #product-gallery-container .arrow-btn#left-arrow-prod {
   left: 5%;
+}
+.products #product-gallery-container .arrow-btn:hover {
+  background-color: #ff5400;
+  border-color: #ff5400;
+}
+.products #product-gallery-container .arrow-btn:hover svg {
+  fill: #fdf7e7;
+}
+.products #product-gallery-container .arrow-btn:active, .products #product-gallery-container .arrow-btn:focus {
+  border: #ff5400 2px solid;
 }
 .products .page-divider {
   margin: clamp(19.8px, 20vh, 56px) 0;

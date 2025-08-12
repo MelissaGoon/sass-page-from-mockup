@@ -61,7 +61,7 @@
             top: 37%;
             z-index: 999;
             background-color: $brand-color-beige;
-            border: none;
+            border: 2px $brand-color-beige solid;
             display: flex;
             align-items: center;
             cursor: pointer;
@@ -81,6 +81,19 @@
 
             &#left-arrow-prod {
                 left: 5%;
+            }
+
+            &:hover {
+                background-color: $brand-color-orange;
+                border-color: $brand-color-orange;
+                svg {
+                    fill: $brand-color-beige;
+                }
+            }
+
+            &:active,
+            &:focus {
+                border: $brand-color-orange 2px solid;
             }
         }
     }

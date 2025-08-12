@@ -1,5 +1,5 @@
-@use 'variables' as *;
-@use 'mixins' as *;
+@use "variables" as *;
+@use "mixins" as *;
 
 .site-header {
     background-color: $brand-color-beige;
@@ -63,7 +63,6 @@
         border-top: 1px solid $extra-color-salmon;
         padding: $space-m 0;
 
-
         &.open {
             display: flex;
             flex-direction: column;
@@ -79,13 +78,13 @@
             li {
                 position: relative;
 
-                &.has-submenu>a::after,
-                &.has-submenu>span::after {
-                    content: '';
+                &.has-submenu > a::after,
+                &.has-submenu > span::after {
+                    content: "";
                     display: inline-block;
                     width: 12px;
                     height: 12px;
-                    background-image: url('../assets/arrow.svg');
+                    background-image: url("../assets/arrow.svg");
                     background-size: contain;
                     background-repeat: no-repeat;
                     background-position: center;
@@ -107,7 +106,9 @@
                     gap: 0.4em;
                     text-transform: uppercase;
 
-                    &:hover {
+                    &:hover,
+                    &:active,
+                    &:focus {
                         text-decoration: underline;
                     }
                 }
@@ -162,7 +163,7 @@
         padding: $space-s $space-l;
 
         .logo img {
-            height: 8rem
+            height: 8rem;
         }
 
         .main-nav {
@@ -184,12 +185,12 @@
                 li {
                     position: relative;
 
-                    &.has-submenu>span::after {
-                        content: '';
+                    &.has-submenu > span::after {
+                        content: "";
                         display: inline-block;
                         width: 12px;
                         height: 12px;
-                        background-image: url('../assets/arrow.svg');
+                        background-image: url("../assets/arrow.svg");
                         background-size: contain;
                         background-repeat: no-repeat;
                         background-position: center;
@@ -197,7 +198,7 @@
                         margin-left: 0.3em;
                     }
 
-                    &.has-submenu:hover>span::after {
+                    &.has-submenu:hover > span::after {
                         transform: rotate(90deg);
                     }
 
@@ -218,7 +219,7 @@
                     }
 
                     // Add underline on hover
-                    &.has-submenu:hover>span {
+                    &.has-submenu:hover > span {
                         text-decoration: underline;
                     }
 
@@ -250,12 +251,12 @@
                         }
                     }
 
-                    &:hover .submenu {
+                    &:hover .submenu,
+                    &:active .submenu,
+                    &:focus .submenu {
                         display: flex;
                     }
                 }
-
-
             }
         }
 
