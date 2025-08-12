@@ -323,7 +323,7 @@ body {
   order: 1;
   text-align: center;
 }
-.hero-header .hero-slide .content h1 {
+.hero-header .hero-slide .content h2 {
   font-family: "Big Shoulders", sans-serif;
   font-size: 2rem;
   font-weight: 700;
@@ -482,7 +482,7 @@ body {
     justify-content: center;
     align-items: center;
   }
-  .hero-header .hero-slide .content h1 {
+  .hero-header .hero-slide .content h2 {
     font-size: 80px;
     margin-bottom: 19.8px;
   }
