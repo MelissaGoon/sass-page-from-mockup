@@ -351,7 +351,7 @@ body {
 .hero-header .hero-slide .content a {
   display: inline-block;
   font-family: "Montserrat", sans-serif;
-  margin: 0 auto;
+  margin: 1rem auto 1.2rem;
   font-weight: 600;
   font-size: 0.9rem;
   padding: 0.5em 1em;
