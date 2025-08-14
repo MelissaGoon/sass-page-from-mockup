@@ -2,29 +2,901 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SASS Page From Mockup - L'Atelier de Géraldine</title>
-    <meta name="description" content="A website dedicated to Penang, Malaysia, exploring its food and heritage.">
+    <meta name="description"
+        content="This is a group project that aims to recreate a webpage mockup with HTML, JS and SASS.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css" />
 </head>
 
 <body>
     <a class="screen-reader-text" href="#site-main">Skip to content</a>
-    <header></header>
+
+    <header class="site-header">
+        <h1 class="screen-reader-text">L'Atelier de Géraldine — Biscuiterie du Jura à Saint-Amour</h1>
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="assets/logo-arrondi-bloc.svg" alt="Atelier de Géraldine Logo" />
+            </a>
+            <!-- Hamburger Menu (Mobile) -->
+            <button class="hamburger" aria-label="Ouvrir le menu">
+                <span></span><span></span><span></span>
+            </button>
+
+
+
+            <!-- Desktop -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="has-submenu">
+                        <button aria-expanded="false" aria-controls="bricelets-submenu">Bricelets</button>
+                        <ul class="submenu" id="bricelets-submenu">
+                            <li><a href="#">Sucrés</a></li>
+                            <li><a href="#">Salés</a></li>
+                            <li><a href="#">Personnalisation</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu">
+                        <button aria-expanded="false" aria-controls="epicerie-submenu">Épicerie</button>
+                        <ul class="submenu" id="epicerie-submenu">
+                            <li><a href="#">Tablettes de chocolat</a></li>
+                            <li><a href="#">Vinaigres</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu">
+                        <button aria-expanded="false" aria-controls="biscuiterie-submenu">Biscuiterie</button>
+                        <ul class="submenu" id="biscuiterie-submenu">
+                            <li><a href="#">Notre histoire</a></li>
+                            <li><a href="#">Le bricelet</a></li>
+                            <li><a href="#">Palette de saveurs</a></li>
+                            <li><a href="#">Contact &amp; Nous visiter</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item"><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="assets/search.svg" class="icon-link" aria-label="Rechercher">
+                    <img src="assets/search.svg" alt="Recherche" />
+                </a>
+
+                <a href="assets/profile.svg" class="icon-link" aria-label="Profil">
+                    <img src="assets/profile.svg" alt="Profil utilisateur" />
+                </a>
+
+                <a href="assets/cart.svg" class="icon-link" aria-label="Panier">
+                    <img src="assets/cart.svg" alt="Panier" />
+                </a>
+            </div>
+        </div>
+    </header>
     <main id="site-main">
-        <article class="hero"></article>
-        <article class="products"></article>
-        <article class="about"></article>
+        <article class="hero-header">
+            <button id="hero-prev" class="hero-prev" aria-label="Slide précédente">
+                <svg aria-label="See Previous" class="" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 2509.42 1962.66">
+                    <path
+                        d="M909.64,0c-20.87,95.54-53.02,195.6-96.33,300.17c-43.32,104.57-99.32,203.16-168.02,295.77S494.47,761.7,398.82,815.51 v17.94l2110.6-40.33v376.42l-2110.6-40.33v17.94c101.58,68.7,186.75,147.83,255.44,237.45c68.7,89.62,123.97,184.49,165.82,284.55 c41.85,100.06,76.2,197.91,103.05,293.51H501.92c-20.92-116.53-52.28-227.81-94.13-333.84 c-41.79-106.03-97.07-203.89-165.76-293.51C173.32,1245.68,92.61,1168.02,0,1102.31V860.35 c137.45-98.59,247.26-218.84,329.38-360.74C411.56,357.7,469.09,191.14,501.92,0H909.64z">
+                    </path>
+                </svg>
+            </button>
+
+            <section class="hero-slide" id="slide-1">
+                <img src="assets/header-tablette.png" alt="Chocolat + Bricelet" />
+
+                <div class="slide-right">
+                    <div class="content">
+                        <h2>Chocolat + Bricelet</h2>
+                        <p>C’est l’histoire <i>hot</i> en saveur 🔥 entre une
+                            biscuitière spécialiste du bricelet 🧇 et un artisan chocolatier passionné,
+                            travaillant de la fève à la tablette 🍫. Un jour, ils font <strong>crack-crack</strong>
+                            ensemble… 😏 Et <i>paf</i>, ça a fait du <strong>chocolat aux éclats de
+                                bricelet</strong> ! 💥</p>
+                        <a href="#">Tablettes chocolat +
+                            bricelets</a>
+                        <span class="slide-indicator">1 / 7</span>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="hero-slide" id="slide-2">
+                <img src="assets/1-1.png" alt="Pimpez vos salades" />
+                <div class="slide-right">
+                    <div class="content">
+                        <h2>Pimpez vos salades</h2>
+                        <p>Pimpez vos salades avec une touche de soleil et de bonne humeur ! Nos vinaigres
+                            de cidre se marient au miel de fleurs et aux fruits de saison, mais aussi à des
+                            saveurs uniques du Jura comme l'ail des ours. Un vrai shot de "happy" dans votre
+                            assiette !</p>
+                        <a href="#">Vinaigres de cidre</a>
+                        <span class="slide-indicator">2 / 7</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hero-slide" id="slide-3">
+                <img src="assets/slide-1.jpg" alt="Le renouveau de l’apéro" />
+                <div class="slide-right">
+                    <div class="content">
+                        <h2>Le renouveau de l’apéro</h2>
+                        <p>Pour faire crack-crack avec les copains… ou en solo, nous avons imaginé une gamme
+                            de bricelets salés aux saveurs plus originales et gourmandes les unes que les
+                            autres. Une fois la main dans le paquet, impossible de s’arrêter !</p>
+                        <a href="#">Nos bricelets salés</a>
+                        <span class="slide-indicator">3 / 7</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hero-slide" id="slide-4">
+                <img src="assets/slide-2-1.jpg" alt="Douceurs à croquer" />
+                <div class="slide-right">
+                    <div class="content">
+                        <h2>Douceurs à croquer</h2>
+                        <p>Des saveurs les plus classiques aux plus
+                            créatives, nos bricelets sucrés enchanteront petits et grands gourmands à
+                            l’heure du goûter, de la pause café ou de n’importe quel petit creux de la
+                            journée. Le plus difficile sera de savoir par quel parfum commencer !</p>
+                        <a href="#">Nos bricelets sucrés</a>
+                        <span class="slide-indicator">4 / 7</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hero-slide" id="slide-5">
+                <img src="assets/slide-4.jpg" alt="Un savoir-fer authentique" />
+                <div class="slide-right">
+                    <div class="content">
+                        <h2>Un « savoir-fer » authentique</h2>
+                        <p>Nos bricelets sont confectionnés dans notre petit
+                            atelier de Saint-Amour de manière 100% artisanale et fidèle à la recette qui
+                            nous a été transmise.</p>
+                        <a href="#">Nos secrets de fabrication</a>
+                        <span class="slide-indicator">5 / 7</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hero-slide" id="slide-6">
+                <img src="assets/slide-3.jpg" alt="Amour & Gourmandise" />
+                <div class="slide-right">
+                    <div class="content">
+                        <h2>Amour & Gourmandise</h2>
+                        <p>Il était une fois <em>Géraldine Rude</em>, son
+                            savoir-faire pâtissier, sa créativité débordante, son (Saint) Amour infini
+                            pour sa région et ses traditions, sans oublier son goût de la transmission.
+                            Bref, tous les ingrédients de la meilleure et de la plus authentique recette
+                            de biscuiterie artisanale jurassienne…</p>
+                        <a href="#">Notre histoire ❤</a>
+                        <span class="slide-indicator">6 / 7</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hero-slide" id="slide-7">
+                <img src="assets/slide-5.jpg" alt="Ça sort du four !" />
+                <div class="slide-right">
+                    <div class="content">
+                        <h2>Ça sort du four !</h2>
+                        <p>Nouveautés, évènements et rendez-vous gourmands,
+                            vie de l’atelier, portraits de producteurs,… nous partageons sur notre blog
+                            toutes nos dernières actualités les plus croustillantes :) </p>
+                        <a href="#">Notre blog</a>
+                        <span class="slide-indicator">7 / 7</span>
+                    </div>
+                </div>
+            </section>
+
+            <button id="hero-next" class="hero-next" aria-label="Slide suivante">
+                <svg aria-label="See Next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.72 16.2">
+                    <path
+                        d="M13.21,16.2c.17-.79.44-1.62.8-2.48.36-.86.82-1.68,1.39-2.44.57-.76,1.25-1.37,2.04-1.81v-.15l-17.42.33v-3.11l17.42.33v-.15c-.84-.57-1.54-1.22-2.11-1.96-.57-.74-1.02-1.52-1.37-2.35-.35-.83-.63-1.63-.85-2.42h3.48c.17.96.43,1.88.78,2.76.34.88.8,1.68,1.37,2.42.57.74,1.23,1.38,2,1.92v2c-1.13.81-2.04,1.81-2.72,2.98-.68,1.17-1.15,2.55-1.42,4.12h-3.37Z">
+                    </path>
+                </svg>
+            </button>
+        </article>
+
+        <article class="products">
+            <article class="splash-text">
+                <img src="assets/Geralidnes_yeux-1.svg"
+                    alt="An illustration of a woman holding biscuits in front of her eyes.">
+                <p>Dans notre biscuiterie de Saint-Amour, nous mettons tout notre savoir-faire pâtissier & notre
+                    créativité pour redonner de l’éclat(e) à une douceur qui a tant bercé notre enfance : le bricelet
+                    suisse. Et nous l'espérons, laisser à notre tour une empreinte dans le cœur des gourmands… petits et
+                    grands.</p>
+                <a href="#">Par ici la dégustation !</a>
+            </article>
+
+            <div class="product-container">
+                <div class="tab-names" id="tab-names">
+                    <button class="tab" id="sucres_tab">
+                        <p>Sucrés</p>
+                        <span class="corner-num">10</span>
+                    </button>
+
+                    <button class="tab" id="sales_tab">
+                        <p>Salés</p>
+                        <span class="corner-num">8</span>
+                    </button>
+
+                    <button class="tab" id="tablettes_tab">
+                        <p>Tablettes</p>
+                        <span class="corner-num">4</span>
+                    </button>
+
+                    <button class="tab" id="vinaigres_tab">
+                        <p>Vinaigres</p>
+                        <span class="corner-num">7</span>
+                    </button>
+
+                </div>
+
+                <div id="product-gallery-container">
+                    <button id="left-arrow-prod" class="arrow-btn">
+                        <svg aria-label="See Previous" class="" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 2509.42 1962.66">
+                            <path
+                                d="M909.64,0c-20.87,95.54-53.02,195.6-96.33,300.17c-43.32,104.57-99.32,203.16-168.02,295.77S494.47,761.7,398.82,815.51 v17.94l2110.6-40.33v376.42l-2110.6-40.33v17.94c101.58,68.7,186.75,147.83,255.44,237.45c68.7,89.62,123.97,184.49,165.82,284.55 c41.85,100.06,76.2,197.91,103.05,293.51H501.92c-20.92-116.53-52.28-227.81-94.13-333.84 c-41.79-106.03-97.07-203.89-165.76-293.51C173.32,1245.68,92.61,1168.02,0,1102.31V860.35 c137.45-98.59,247.26-218.84,329.38-360.74C411.56,357.7,469.09,191.14,501.92,0H909.64z">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <button id="right-arrow-prod" class="arrow-btn">
+                        <svg aria-label="See Next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.72 16.2">
+                            <path
+                                d="M13.21,16.2c.17-.79.44-1.62.8-2.48.36-.86.82-1.68,1.39-2.44.57-.76,1.25-1.37,2.04-1.81v-.15l-17.42.33v-3.11l17.42.33v-.15c-.84-.57-1.54-1.22-2.11-1.96-.57-.74-1.02-1.52-1.37-2.35-.35-.83-.63-1.63-.85-2.42h3.48c.17.96.43,1.88.78,2.76.34.88.8,1.68,1.37,2.42.57.74,1.23,1.38,2,1.92v2c-1.13.81-2.04,1.81-2.72,2.98-.68,1.17-1.15,2.55-1.42,4.12h-3.37Z">
+                            </path>
+                        </svg>
+                    </button>
+
+
+                    <div class="product-gallery" id="pr-gal-sucres">
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/citron-1.png" alt="Citron flavoured biscuits">
+                            </div>
+                            <div class="card-text">
+                                <p>Bricelet Sucrés</p>
+                                <h2>Citron</h2>
+                                <button>
+                                    <span class="price">5,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/vanille-1.png" alt="Vanille flavoured biscuits">
+                            </div>
+                            <div class="card-text">
+                                <p>Bricelet Sucrés</p>
+                                <h2>Vanille</h2>
+                                <button>
+                                    <span class="price">5,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/praline-1.png" alt="Praline Rose flavoured biscuits">
+                            </div>
+                            <div class="card-text">
+                                <p>Bricelet Sucrés</p>
+                                <h2>Praline Rose</h2>
+                                <button>
+                                    <span class="price">5,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/chocoolat-1.png" alt="Chocolat flavoured biscuits">
+                            </div>
+                            <div class="card-text">
+                                <p>Bricelet Sucrés</p>
+                                <h2>Chocolat</h2>
+                                <button>
+                                    <span class="price">5,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/cafe-1.png" alt="Café flavoured biscuits">
+                            </div>
+                            <div class="card-text">
+                                <p>Bricelet Sucrés</p>
+                                <h2>Café</h2>
+                                <button>
+                                    <span class="price">5,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/framboise-1.png" alt="Framboise flavoured biscuits">
+                            </div>
+                            <div class="card-text">
+                                <p>Bricelet Sucrés</p>
+                                <h2>Framboise</h2>
+                                <button>
+                                    <span class="price">5,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/amandes-1.png" alt="Amandes flavoured biscuits">
+                            </div>
+                            <div class="card-text">
+                                <p>Bricelet Sucrés</p>
+                                <h2>Amandes</h2>
+                                <button>
+                                    <span class="price">5,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/myrtilles-1.png" alt="Myrtilles flavoured biscuits">
+                            </div>
+                            <div class="card-text">
+                                <p>Bricelet Sucrés</p>
+                                <h2>Myrtilles</h2>
+                                <button>
+                                    <span class="price">5,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/orange-1.png" alt="Orange flavoured biscuits">
+                            </div>
+                            <div class="card-text">
+                                <p>Bricelet Sucrés</p>
+                                <h2>Orange</h2>
+                                <button>
+                                    <span class="price">5,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/cannelle-1.png" alt="Cannelle flavoured biscuits">
+                            </div>
+                            <div class="card-text">
+                                <p>Bricelet Sucrés</p>
+                                <h2>Cannelle</h2>
+                                <button>
+                                    <span class="price">5,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <div class="product-gallery hidden" id="pr-gal-sales">
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/piment-bresse-1.png" alt="Piment de Bresse flavoured biscuits">
+                            </div>
+                            <div class="card-text">
+                                <p>Bricelet Salés</p>
+                                <h2>Piment de Bresse</h2>
+                                <button>
+                                    <span class="price">5,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/persillade-1.png" alt="Persillade flavoured biscuits">
+                            </div>
+                            <div class="card-text">
+                                <p>Bricelet Salés</p>
+                                <h2>Persillade</h2>
+                                <button>
+                                    <span class="price">5,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/olives-nyons-1.png" alt="Olives de Nyons flavoured biscuits">
+                            </div>
+                            <div class="card-text">
+                                <p>Bricelet Salés</p>
+                                <h2>Olives de Nyons</h2>
+                                <button>
+                                    <span class="price">5,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/muster-et-cumin-1.png" alt="Moutarde et Cumin flavoured biscuits">
+                            </div>
+                            <div class="card-text">
+                                <p>Bricelet Salés</p>
+                                <h2>Moutarde et Cumin</h2>
+                                <button>
+                                    <span class="price">5,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/chevre-1.png" alt="Chèvre flavoured biscuits">
+                            </div>
+                            <div class="card-text">
+                                <p>Bricelet Salés</p>
+                                <h2>Chèvre</h2>
+                                <button>
+                                    <span class="price">5,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/bleu-de-gex-1.png" alt="Bleu de Gex flavoured biscuits">
+                            </div>
+                            <div class="card-text">
+                                <p>Bricelet Salés</p>
+                                <h2>Bleu de Gex</h2>
+                                <button>
+                                    <span class="price">5,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/beaufort-1.png" alt="Beaufort flavoured biscuits">
+                            </div>
+                            <div class="card-text">
+                                <p>Bricelet Salés</p>
+                                <h2>Beaufort</h2>
+                                <button>
+                                    <span class="price">5,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/ail-desours-1.png" alt="Ail des Ours flavoured biscuits">
+                            </div>
+                            <div class="card-text">
+                                <p>Bricelet Salés</p>
+                                <h2>Ail des Ours</h2>
+                                <button>
+                                    <span class="price">5,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <div class="product-gallery hidden" id="pr-gal-tablettes">
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/atelier-de-geraldine-chocolats-8-3-scaled.jpg"
+                                    alt="Tablette chocolat 70% éclats Bricelets Framboise">
+                            </div>
+                            <div class="card-text">
+                                <p>Tablettes de chocolat</p>
+                                <h2>Chocolat 70% éclats Bricelets Framboise</h2>
+                                <button>
+                                    <span class="price">8,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/atelier-de-geraldine-chocolats-14oui-1-scaled.jpg"
+                                    alt="Tablette chocolat 70% éclats Bricelets Myrtille">
+                            </div>
+                            <div class="card-text">
+                                <p>Tablettes de chocolat</p>
+                                <h2>Chocolat 70% éclats Bricelets Myrtille</h2>
+                                <button>
+                                    <span class="price">8,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/atelier-de-geraldine-chocolats-2-3-scaled.jpg"
+                                    alt="Tablette chocolat 70% éclats Bricelets Noix et Miel">
+                            </div>
+                            <div class="card-text">
+                                <p>Tablettes de chocolat</p>
+                                <h2>Chocolat 70% éclats Bricelets Noix & Miel</h2>
+                                <button>
+                                    <span class="price">8,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/atelier-de-geraldine-chocolats-20-2-scaled.jpg"
+                                    alt="Pack 3 tablettes chocolat + éclats de bricelets">
+                            </div>
+                            <div class="card-text">
+                                <p>Tablettes de chocolat</p>
+                                <h2>3 tablettes chocolat + éclats de bricelets</h2>
+                                <button>
+                                    <span class="price">25,00 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+
+
+                    </div>
+
+                    <div class="product-gallery hidden" id="pr-gal-vinaigres">
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/vinaigre-BD-7-2-scaled.jpg" alt="Vinaigre de Cidre Tomate">
+                            </div>
+                            <div class="card-text">
+                                <p>Vinaigres de cidre</p>
+                                <h2>Vinaigre de Cidre Tomate</h2>
+                                <button>
+                                    <span class="price">8,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/vinaigre-BD-2-2-scaled.jpg" alt="Vinaigre de Cidre Mangue">
+                            </div>
+                            <div class="card-text">
+                                <p>Vinaigres de cidre</p>
+                                <h2>Vinaigre de Cidre Mangue</h2>
+                                <button>
+                                    <span class="price">8,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/vinaigre-BD-4-2-640x960.jpg" alt="Vinaigre de Cidre Myrtille">
+                            </div>
+                            <div class="card-text">
+                                <p>Vinaigres de cidre</p>
+                                <h2>Vinaigre de Cidre Myrtille</h2>
+                                <button>
+                                    <span class="price">8,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/vinaigre-BD-3-2-640x960.jpg" alt="Vinaigre de Cidre Figue">
+                            </div>
+                            <div class="card-text">
+                                <p>Vinaigres de cidre</p>
+                                <h2>Vinaigre de Cidre Figue</h2>
+                                <button>
+                                    <span class="price">8,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/vinaigre-BD-5-2-638x960.jpg" alt="Vinaigre de Cidre Framboise">
+                            </div>
+                            <div class="card-text">
+                                <p>Vinaigres de cidre</p>
+                                <h2>Vinaigre de Cidre Framboise</h2>
+                                <button>
+                                    <span class="price">8,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/vinaigre-BD-6-2-scaled.jpg" alt="Vinaigre de Cidre Poivron">
+                            </div>
+                            <div class="card-text">
+                                <p>Vinaigres de cidre</p>
+                                <h2>Vinaigre de Cidre Poivron</h2>
+                                <button>
+                                    <span class="price">8,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="img-container">
+                                <img src="assets/vinaigre-BD-1-2-scaled.jpg" alt="Vinaigre de Cidre Ail des Ours">
+                            </div>
+                            <div class="card-text">
+                                <p>Vinaigres de cidre</p>
+                                <h2>Vinaigre de Cidre Ail des Ours</h2>
+                                <button>
+                                    <span class="price">8,50 €</span>
+                                    <span class="hover-text">Hop, dans mon panier !</span>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="page-divider"></div>
+
+            <div class="ingredients">
+                <figure>
+                    <img src="assets/ingredient-BEURRE.svg" alt="Butter icon">
+                    <figcaption>Du beurre frais</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/ingredient-FARINE.svg" alt="Flour icon">
+                    <figcaption>De la farine</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/ingredient-OEUFS.svg" alt="Eggs icon">
+                    <figcaption>Des œufs</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/ingredient-SEL.svg" alt="Salt icon">
+                    <figcaption>Du sel de guérande</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/ingredient-AMOUR.svg" alt="Love icon">
+                    <figcaption>De l'aaaaamour</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/ingredient-ETRIENDAUTRE.svg" alt="Et rien d'autre!">
+                </figure>
+
+
+
+
+            </div>
+
+        </article>
+
+        <article class="about">
+            <div class="about-1">
+                <a href="#" class="red-card">
+                    <h2>Qui sommes-nous ?</h2>
+                    <figure>
+                        <img src="/assets/geraldine-home.png" alt="Geraldine Picture" />
+                    </figure>
+                    <span>Notre histoire</span>
+                </a>
+
+                <a href="#" class="yellow-card">
+                    <h2>50 NUANCES DE <br />BRICELETS (OU<br />PRESQUE !)</h2>
+                    <p>
+                        Derrière nos bricelets hauts en couleurs et en saveurs, il y a
+                        d'abord de formidables rencontres avec des producteurs locaux
+                        riches d'un savoir-faire qu'il nous tient à cœur de valoriser et
+                        de sublimer…
+                    </p>
+                    <div>
+                        <span>Découvrir</span>
+                        <figure>
+                            <img src="/assets/bouton-MELIMELO.svg" alt="Icon Melimelo" />
+                        </figure>
+                        <span class="rotate">Découvrir</span>
+                    </div>
+                </a>
+
+                <a href="#" class="orange-card">
+                    <h2>Bricelons <br />le mystère !</h2>
+                    <p>
+                        Le bricelet est un biscuit originaire de Suisse, probablement lié
+                        à la fabrication des hosties. Unique par sa forme et par ses
+                        motifs, cette fine gaufrette croustillante est entièrement
+                        façonnée à la main puis cuite dans un « fer à bricelets », sceau
+                        du savoir-faire de l'artisan biscuitier.
+                    </p>
+                    <div>
+                        <span>En savoir +</span>
+                        <figure>
+                            <img src="/assets/bouton-BRICELET.svg" alt="Bouton Bricelet" />
+                        </figure>
+                        <span class="rotate">En savoir +</span>
+                    </div>
+                </a>
+
+                <a href="#" class="blue-card">
+                    <h2>Personnaliser son paquet de bricelets</h2>
+                    <figure>
+                        <img src="/assets/goodvibes-only.png" alt="Goodvibes Only" />
+                    </figure>
+                    <span>Personnaliser son paquet de bricelets</span>
+                </a>
+            </div>
+
+            <div class="about-2">
+                <div class="carousel">
+                    <div>
+                        <figure class="rot-15">
+                            <img src="/assets/beaufort.svg" alt="Beaufort" />
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="/assets/piment.svg" alt="Piment" />
+                        </figure>
+                    </div>
+                    <div>
+                        <figure class="rot--15">
+                            <img src="/assets/persillade.svg" alt="Persillade" />
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="/assets/orange.svg" alt="Orange" />
+                        </figure>
+                    </div>
+                    <div>
+                        <figure class="rot-15">
+                            <img src="/assets/olives-de-nyons.svg" alt="Olives de Nyons" />
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="/assets/noix-et-miel.svg" alt="Nois Et Miel" />
+                        </figure>
+                    </div>
+                    <div>
+                        <figure class="rot--15">
+                            <img src="/assets/figue.svg" alt="Figue" />
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="/assets/vanille.svg" alt="Vanille" />
+                        </figure>
+                    </div>
+                    <div>
+                        <a href="#" class="button-about">Shoppez les tous</a>
+                    </div>
+                </div>
+            </div>
+        </article>
     </main>
-    <footer></footer>
+
+    <footer>
+        <section class="forms">
+            <div class="newsletter">
+                <span>Pour qui nos lettres d'Amour ? ❤️ </span>
+
+                <div class="news-text">
+                    <h2>Newsletter</h2>
+                    <p>
+                        Abonnez-vous vite pour ne pas perdre une seule miette de nos
+                        actus, nouveautés & recettes ;)
+                    </p>
+                </div>
+
+                <div class="news-button">
+                    <p>Votre adresse email</p>
+                    <a href="#">S'INSCRIRE</a>
+                </div>
+            </div>
+
+            <div class="carte">
+                <span>CARRÉ POINTS DE VENTE</span>
+                <h2>Où nous dénicher ?</h2>
+                <div class="carte-text">
+                    <p>
+                        Nos bricelets de Saint-Amour conquièrent chaque jour le cœur de
+                        nouveaux revendeurs. Consultez notre carte pour retrouver tous nos
+                        points de vente.
+                    </p>
+                    <a href="#">Voir la carte</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="infos">
+            <div class="infos-1">
+                <p>
+                    Les bricelets de L'atelier de Géraldine sont de fines gaufrettes
+                    artisanales hautes en couleurs et en saveurs gourmandes. Sucrés ou
+                    salés, ils feront le bonheur de tous les fins palais à la recherche
+                    d'originalité et de croustillant dans leur quotidien.
+                </p>
+                <div>
+                    <h2>Suivez-nous</h2>
+                    <a href="#"><img src="/assets/instagram.svg" alt="Instagram Icon"></a>
+                    <a href="#"><img src="/assets/facebook.svg" alt="Facebook Icon"></a>
+                </div>
+            </div>
+
+            <div class="infos-2">
+                <figure class="logo-footer"><a href="#"><img src="/assets/logo-footer.svg" alt="Logo"></a></figure>
+                <figure class="signature-footer"><img src="/assets/signature.svg" alt="Signature"></figure>
+            </div>
+
+            <div class="infos-3">
+                <nav>
+                    <ul>
+                        <li><a href="#">Le bricelet</a></li>
+                        <li><a href="#">Notre histoire</a></li>
+                        <li><a href="#">Le Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">CGV</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="infos-4">
+                <nav>
+                    <ul>
+                        <li><a href="#">Devenir revendeur</a></li>
+                        <li><a href="#">Où nous dénicher ?</a></li>
+                        <li><a href="#">Visiter l'atelier</a></li>
+                        <li><a href="#">Ankorstore</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <section class="copyright">
+            <span>Copyright © 2025 L'atelier de Géraldine</span>
+            <a href="#">5 rue du Plateau Allonal, 39160 SAINT-AMOUR</a>
+            <a href="#">L'équipe derrière le site</a>
+            <a href="#">Mentions légales</a>
+            <figure class="besoin"><a href="#"><img src="/assets/aide.svg" alt="Aide"></a></figure>
+            <figure class="whatsapp"><a href="#"><img src="/assets/whataspp.svg" alt="Whatsapp"></a></figure>
+        </section>
+
+        <section class="footer-bar"></section>
+    </footer>
+    <script src="/scripts/script.js"></script>
+
+    <script src="scripts/products-section.js"></script>
+    <script src="scripts/hero-slider.js"></script>
+    <script src="scripts/menu.js"></script>
 </body>
 
 </html>
