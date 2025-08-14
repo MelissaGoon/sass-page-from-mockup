@@ -18,8 +18,7 @@
         width: auto;
     }
 
-    // --- MOBILE styles ---
-    // Hamburger menu visible
+    // --- MOBILE ---
     .hamburger {
         display: flex;
         flex-direction: column;
@@ -54,7 +53,6 @@
         }
     }
 
-    // Mobile menu hidden by default
     .main-nav {
         display: none;
         flex-direction: column;
@@ -135,20 +133,19 @@
                     }
 
                     &.open {
-                        display: flex; // Show submenu when .open is toggled
+                        display: flex;
                     }
                 }
 
-                // Optionally add styles here if you want to toggle submenu on mobile
             }
         }
     }
 
     .header-icons {
-        display: none; // hide on mobile
+        display: none;
     }
 
-    // --- DESKTOP styles ---
+    // --- DESKTOP ---
     @media (min-width: 760px) {
         .container {
             display: flex;
@@ -177,7 +174,7 @@
                 display: flex;
                 align-items: center;
                 gap: $space-l;
-                justify-content: center; // add this line
+                justify-content: center;
                 list-style: none;
                 margin: 0;
                 padding: 0;
@@ -221,7 +218,6 @@
                         text-transform: uppercase;
                     }
 
-                    // Add underline on hover
                     &.has-submenu:hover > button {
                         text-decoration: underline;
                     }
