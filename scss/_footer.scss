@@ -71,6 +71,10 @@ footer {
         font-weight: 700;
         font-size: 16px;
         padding: 12px 20px;
+        transition: transform 0.3s ease;
+      }
+      a:hover {
+        transform: translateX(10px);
       }
     }
   }
@@ -171,6 +175,11 @@ footer {
 
       a {
         width: 30px;
+        transition: all 0.2s;
+      }
+
+      a:hover {
+        transform: rotate(45deg);
       }
     }
   }

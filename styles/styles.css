@@ -1036,6 +1036,9 @@ body {
   text-transform: uppercase;
   font-weight: 700;
 }
+.about-2 a:hover {
+  background-color: #fff6db;
+}
 .about-2 .rot--15 {
   transform: rotateZ(-15deg);
 }
@@ -1114,6 +1117,10 @@ footer {
   font-weight: 700;
   font-size: 16px;
   padding: 12px 20px;
+  transition: transform 0.3s ease;
+}
+.forms .newsletter .news-button a:hover {
+  transform: translateX(10px);
 }
 .forms .carte {
   background-color: #ff5400;
@@ -1207,6 +1214,10 @@ footer {
 }
 .infos .infos-1 div a {
   width: 30px;
+  transition: all 0.2s;
+}
+.infos .infos-1 div a:hover {
+  transform: rotate(45deg);
 }
 .infos .infos-2 {
   display: flex;
