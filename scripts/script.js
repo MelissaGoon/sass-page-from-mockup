@@ -38,7 +38,39 @@ function Marquee(selector, speed) {
   animate();
 }
 
+function MarqueeTwo(selector, speed) {
+  const parent = document.querySelector(selector);
+  const content = parent.innerHTML;
+
+  parent.insertAdjacentHTML("beforeend", content); 
+  parent.insertAdjacentHTML("beforeend", content);
+
+  let i = 0;
+  let isPaused = false;
+  const resetPoint = parent.scrollWidth / 3; 
 
 
+  function animate() {
+    
+      i -= speed;
 
+      if (Math.abs(i) >= resetPoint) {
+        i = 0;
+      }
+
+      parent.style.transform = `translateX(${i}px)`;
+    
+    requestAnimationFrame(animate);
+  }
+
+  parent.style.display = 'flex';
+  parent.style.width = 'fit-content';
+  parent.style.willChange = 'transform';
+  parent.style.transition = 'transform 0s linear';
+
+  animate();
+}
+
+
+MarqueeTwo(".carousel-orange", 1.0)
 Marquee(".carousel", 1.5);

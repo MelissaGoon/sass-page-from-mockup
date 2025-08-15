@@ -37,7 +37,7 @@
       padding: $space-m;
       position: relative;
       z-index: 2;
-      order: 1; 
+      order: 1;
       text-align: center;
 
       h2 {
@@ -79,9 +79,7 @@
         background-color: $brand-color-orange;
         color: $brand-color-white;
         text-decoration: none;
-        transition:
-          transform 0.2s ease,
-          background-color 0.3s ease;
+        transition: transform 0.2s ease, background-color 0.3s ease;
         position: relative;
 
         &:hover,
@@ -166,7 +164,6 @@
 }
 
 .site-header {
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -206,7 +203,6 @@
       align-items: center;
       justify-content: space-between;
       gap: $space-xl;
-
 
       img {
         width: 50%;
@@ -301,4 +297,35 @@
       }
     }
   }
+}
+
+.orange-bar {
+  background-color: $brand-color-orange;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+  width: 100%;
+
+  .carousel-orange {
+    display: flex;
+    position: relative;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .carousel-orange > div {
+      flex-shrink: 0;
+    }
+
+  figure {
+    margin: 0;
+  }
+  figure img {
+    max-width: 100%;
+    height: 60px;
+  }
+  
 }

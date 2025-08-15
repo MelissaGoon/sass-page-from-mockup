@@ -58,6 +58,28 @@ body {
   background-color: #fdf7e7;
 }
 
+.header-bar {
+  align-items: center;
+  background-color: #ff5400;
+  margin: 0;
+  padding: 12px;
+}
+.header-bar p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: #fffffe;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-style: italic;
+  line-height: 16.8px;
+}
+.header-bar p strong {
+  font-style: normal;
+}
+
 .site-header {
   background-color: #fdf7e7;
   padding: 19.8px 28px;
@@ -439,7 +461,6 @@ body {
 }
 
 .site-header {
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -551,6 +572,33 @@ body {
     transform: scale(1.1);
   }
 }
+.orange-bar {
+  background-color: #ff5400;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+  width: 100%;
+}
+.orange-bar .carousel-orange {
+  display: flex;
+  position: relative;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.orange-bar .carousel-orange > div {
+  flex-shrink: 0;
+}
+.orange-bar figure {
+  margin: 0;
+}
+.orange-bar figure img {
+  max-width: 100%;
+  height: 60px;
+}
+
 .product-gallery {
   display: flex;
   gap: 1rem;

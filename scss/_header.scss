@@ -1,6 +1,33 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+
+
+.header-bar {
+        align-items: center;
+        background-color: $brand-color-orange;
+        margin: 0;
+        padding: 12px;
+
+        p {
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            font-family: $body-font;
+            color: $brand-color-white;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-style: italic;
+            line-height: 16.8px;
+
+            strong {
+                font-style: normal;
+            }
+
+        }
+}
+
 .site-header {
     background-color: $brand-color-beige;
     padding: $space-s $space-m;
@@ -17,6 +44,7 @@
         height: 6rem;
         width: auto;
     }
+
 
     // --- MOBILE ---
     .hamburger {
