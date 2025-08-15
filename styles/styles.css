@@ -58,6 +58,28 @@ body {
   background-color: #fdf7e7;
 }
 
+.header-bar {
+  align-items: center;
+  background-color: #ff5400;
+  margin: 0;
+  padding: 12px;
+}
+.header-bar p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: #fffffe;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-style: italic;
+  line-height: 16.8px;
+}
+.header-bar p strong {
+  font-style: normal;
+}
+
 .site-header {
   background-color: #fdf7e7;
   padding: 19.8px 28px;
@@ -208,7 +230,7 @@ body {
   .site-header .main-nav .nav-list {
     display: flex;
     align-items: center;
-    gap: 39.6px;
+    gap: clamp(0.25rem, 4vw, 39.6px);
     justify-content: center;
     list-style: none;
     margin: 0;
@@ -284,8 +306,8 @@ body {
     gap: 19.8px;
   }
   .site-header .header-icons .icon-link img {
-    width: clamp(40px, 4.5vw, 56px);
-    height: clamp(40px, 4.5vw, 56px);
+    width: clamp(40px, 2vw, 56px);
+    height: clamp(40px, 2vw, 56px);
     transition: transform 0.2s ease;
   }
   .site-header .header-icons .icon-link img:hover {
@@ -321,10 +343,14 @@ body {
   object-position: center top;
   display: block;
 }
+.hero-header .hero-slide .slide-right {
+  margin-bottom: 28px;
+}
 .hero-header .hero-slide .content {
   width: 100%;
   max-width: 600px;
-  padding: 28px;
+  display: flex;
+  flex-direction: column;
   position: relative;
   z-index: 2;
   order: 1;
@@ -357,6 +383,7 @@ body {
 }
 .hero-header .hero-slide .content a {
   display: inline-block;
+  text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   margin: 1rem auto 1.2rem;
   font-weight: 600;
@@ -384,11 +411,6 @@ body {
   pointer-events: none;
 }
 .hero-header .hero-slide .slide-indicator {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
   text-align: center;
   font-size: 1rem;
   font-family: "Montserrat", sans-serif;
@@ -439,7 +461,6 @@ body {
 }
 
 .site-header {
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -471,7 +492,6 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 56px;
   }
   .hero-header .hero-slide img {
     width: 50%;
@@ -481,42 +501,49 @@ body {
   }
   .hero-header .hero-slide .slide-right {
     width: 50%;
+    padding: 1rem;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   .hero-header .hero-slide .content {
     width: 100%;
-    max-width: 600px;
+    max-width: 40rem;
     height: 100%;
     padding: 0 5px 0 0;
     order: 0;
     text-align: center;
     justify-content: center;
     align-items: center;
+    position: static;
   }
   .hero-header .hero-slide .content h2 {
-    font-size: 80px;
+    font-size: clamp(2rem, 5vw, 5rem);
     margin-bottom: 19.8px;
   }
   .hero-header .hero-slide .content p {
-    font-size: 15.6px;
-    max-width: 480px;
+    font-size: 1.4rem;
+    max-width: 32rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 28px;
     text-align: center;
   }
   .hero-header .hero-slide .content a {
-    font-size: 14px;
+    font-size: 1rem;
     padding: 0.6em 1.2em;
     margin-bottom: 19.8px;
   }
   .hero-header .hero-slide .slide-indicator {
     position: absolute;
-    bottom: -100px;
-    left: 50%;
+    bottom: 2%;
+    left: 75%;
     text-align: center;
     font-size: var(--text-m);
+  }
+  .hero-header .hero-prev,
+  .hero-header .hero-next {
+    top: 50%;
   }
   .site-header {
     position: static;
@@ -551,6 +578,58 @@ body {
     transform: scale(1.1);
   }
 }
+.orange-bar {
+  background-color: #ff5400;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+  width: 100%;
+}
+.orange-bar button {
+  position: absolute;
+  z-index: 1;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  top: 1.275rem;
+  margin: 0 1rem;
+  height: 1.2rem;
+  width: 1.2rem;
+  transition: transform 0.2s;
+}
+.orange-bar button img {
+  height: auto;
+}
+.orange-bar button#carousel-next {
+  right: 0;
+}
+.orange-bar button:hover {
+  transform: scale(1.3);
+}
+.orange-bar button:active, .orange-bar button:focus {
+  background-color: #fdf7e7;
+}
+.orange-bar .carousel-orange {
+  display: flex;
+  position: relative;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.orange-bar .carousel-orange > div {
+  flex-shrink: 0;
+}
+.orange-bar figure {
+  margin: 0;
+}
+.orange-bar figure img {
+  max-width: 100%;
+  height: 3.75rem;
+}
+
 .product-gallery {
   display: flex;
   gap: 1rem;
