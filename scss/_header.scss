@@ -21,6 +21,7 @@
     // --- MOBILE ---
     .hamburger {
         display: flex;
+        flex: none;
         flex-direction: column;
         justify-content: space-around;
         width: 30px;
@@ -49,7 +50,7 @@
         }
 
         &.open span:nth-child(3) {
-            transform: rotate(-45deg);
+            transform: rotate(-45deg) translateY(3px) translateX(-3px);
         }
     }
 
@@ -92,6 +93,8 @@
 
                 a,
                 button {
+                    background-color: transparent;
+                    border: none;
                     font-family: $extra-font;
                     font-weight: 600;
                     font-size: 1rem;
@@ -136,7 +139,6 @@
                         display: flex;
                     }
                 }
-
             }
         }
     }
