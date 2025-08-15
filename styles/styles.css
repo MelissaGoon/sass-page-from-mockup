@@ -343,10 +343,14 @@ body {
   object-position: center top;
   display: block;
 }
+.hero-header .hero-slide .slide-right {
+  margin-bottom: 28px;
+}
 .hero-header .hero-slide .content {
   width: 100%;
   max-width: 600px;
-  padding: 28px;
+  display: flex;
+  flex-direction: column;
   position: relative;
   z-index: 2;
   order: 1;
@@ -406,11 +410,6 @@ body {
   pointer-events: none;
 }
 .hero-header .hero-slide .slide-indicator {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
   text-align: center;
   font-size: 1rem;
   font-family: "Montserrat", sans-serif;
@@ -507,21 +506,22 @@ body {
   }
   .hero-header .hero-slide .content {
     width: 100%;
-    max-width: 600px;
+    max-width: 40rem;
     height: 100%;
     padding: 0 5px 0 0;
     order: 0;
     text-align: center;
     justify-content: center;
     align-items: center;
+    position: static;
   }
   .hero-header .hero-slide .content h2 {
-    font-size: 80px;
+    font-size: clamp(2rem, 5vw, 5rem);
     margin-bottom: 19.8px;
   }
   .hero-header .hero-slide .content p {
-    font-size: 15.6px;
-    max-width: 480px;
+    font-size: 1.4rem;
+    max-width: 32rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 28px;
@@ -534,10 +534,14 @@ body {
   }
   .hero-header .hero-slide .slide-indicator {
     position: absolute;
-    bottom: -100px;
-    left: 50%;
+    bottom: 2%;
+    left: 75%;
     text-align: center;
     font-size: var(--text-m);
+  }
+  .hero-header .hero-prev,
+  .hero-header .hero-next {
+    top: 50%;
   }
   .site-header {
     position: static;
