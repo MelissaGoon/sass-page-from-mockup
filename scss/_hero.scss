@@ -79,7 +79,9 @@
         background-color: $brand-color-orange;
         color: $brand-color-white;
         text-decoration: none;
-        transition: transform 0.2s ease, background-color 0.3s ease;
+        transition:
+          transform 0.2s ease,
+          background-color 0.3s ease;
         position: relative;
 
         &:hover,
@@ -301,10 +303,41 @@
 
 .orange-bar {
   background-color: $brand-color-orange;
+  position: relative;
   padding-left: 0;
   padding-right: 0;
   overflow: hidden;
   width: 100%;
+
+  button {
+    position: absolute;
+    z-index: 1;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    top: 1.275rem;
+    margin: 0 1rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    transition: transform 0.2s;
+
+    img {
+      height: auto;
+    }
+
+    &#carousel-next {
+      right: 0;
+    }
+
+    &:hover {
+      transform: scale(1.3);
+    }
+
+    &:active,
+    &:focus {
+      background-color: $brand-color-beige;
+    }
+  }
 
   .carousel-orange {
     display: flex;
@@ -317,15 +350,14 @@
   }
 
   .carousel-orange > div {
-      flex-shrink: 0;
-    }
+    flex-shrink: 0;
+  }
 
   figure {
     margin: 0;
   }
   figure img {
     max-width: 100%;
-    height: 60px;
+    height: 3.75rem;
   }
-  
 }
