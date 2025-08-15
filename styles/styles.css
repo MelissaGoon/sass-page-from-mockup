@@ -230,7 +230,7 @@ body {
   .site-header .main-nav .nav-list {
     display: flex;
     align-items: center;
-    gap: 39.6px;
+    gap: clamp(0.25rem, 4vw, 39.6px);
     justify-content: center;
     list-style: none;
     margin: 0;
@@ -306,8 +306,8 @@ body {
     gap: 19.8px;
   }
   .site-header .header-icons .icon-link img {
-    width: clamp(40px, 4.5vw, 56px);
-    height: clamp(40px, 4.5vw, 56px);
+    width: clamp(40px, 2vw, 56px);
+    height: clamp(40px, 2vw, 56px);
     transition: transform 0.2s ease;
   }
   .site-header .header-icons .icon-link img:hover {
@@ -383,6 +383,7 @@ body {
 }
 .hero-header .hero-slide .content a {
   display: inline-block;
+  text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   margin: 1rem auto 1.2rem;
   font-weight: 600;
@@ -491,7 +492,6 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 56px;
   }
   .hero-header .hero-slide img {
     width: 50%;
@@ -501,8 +501,10 @@ body {
   }
   .hero-header .hero-slide .slide-right {
     width: 50%;
+    padding: 1rem;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   .hero-header .hero-slide .content {
     width: 100%;
@@ -528,7 +530,7 @@ body {
     text-align: center;
   }
   .hero-header .hero-slide .content a {
-    font-size: 14px;
+    font-size: 1rem;
     padding: 0.6em 1.2em;
     margin-bottom: 19.8px;
   }
