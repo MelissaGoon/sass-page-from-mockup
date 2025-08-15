@@ -767,7 +767,7 @@ body {
   position: relative;
   display: flex;
 }
-.products .tab-names .tab p {
+.products .tab-names .tab .title {
   font-family: "Big Shoulders", sans-serif;
   font-size: clamp(2rem, 6vw, 5rem);
   margin: 0.5rem 0.2rem;
@@ -781,11 +781,11 @@ body {
   top: 0;
   right: 0;
 }
-.products .tab-names .tab.current p {
+.products .tab-names .tab.current .title {
   text-underline-offset: 0.4rem;
   text-decoration: underline 5px;
 }
-.products .tab-names .tab:hover p, .products .tab-names .tab:active p, .products .tab-names .tab:focus p {
+.products .tab-names .tab:hover .title, .products .tab-names .tab:active .title, .products .tab-names .tab:focus .title {
   text-underline-offset: 0.4rem;
   text-decoration: underline 5px;
 }

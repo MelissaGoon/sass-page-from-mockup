@@ -24,7 +24,7 @@
             position: relative;
             display: flex;
 
-            p {
+            .title {
                 font-family: $heading-font;
                 font-size: clamp(2rem, 6vw, 5rem);
                 margin: 0.5rem 0.2rem;
@@ -40,13 +40,13 @@
                 right: 0;
             }
 
-            &.current p {
+            &.current .title {
                 @include underline(5px, 0.4rem);
             }
 
-            &:hover p,
-            &:active p,
-            &:focus p {
+            &:hover .title,
+            &:active .title,
+            &:focus .title {
                 @include underline(5px, 0.4rem);
             }
         }
